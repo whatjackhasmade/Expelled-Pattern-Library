@@ -38,3 +38,27 @@ textarea {
 
 	resize: vertical;
 }
+
+input[type="radio"] {
+	display: none;
+
+	& + label {
+		display: inline-block;
+		margin-top: 0;
+		padding: $spacing-tiny $spacing-small;
+		position: relative;
+
+		border: 2px solid transparent;
+		cursor: pointer;
+		transition: 0.1s all ease;
+	}
+
+	&:checked {
+		& + label {
+			background-color: $color-grey-light;
+			border-color: $color-primary;
+			color: $color-secondary;
+			font-weight: $font-weight-bold;
+		}
+	}
+}

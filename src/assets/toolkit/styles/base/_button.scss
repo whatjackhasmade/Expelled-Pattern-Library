@@ -4,10 +4,10 @@
  * -----------------------------------------------------------------------------
  */
 
+[type="button"],
 [type="reset"],
 [type="submit"],
-button,
-html [type="button"] {
+button {
 	margin-top: $spacing-default;
 	padding: $spacing-small $spacing-default;
 
@@ -21,6 +21,11 @@ html [type="button"] {
 	@include active-states() {
 		background-color: lighten($color-primary, 10%);
 	}
+}
+
+button[disabled] {
+	background: $color-grey;
+	cursor: initial;
 }
 
 .simplefavorite-button {

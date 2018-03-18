@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
 
 	<meta charset="utf-8">
@@ -7,28 +8,22 @@
 
 	<title>{{title}}</title>
 
-	{{#if fabricator}}<link rel="stylesheet" href="{{baseurl}}/assets/fabricator/styles/f.css">{{/if}}
+	{{#if fabricator}}
+	<link rel="stylesheet" href="{{baseurl}}/assets/fabricator/styles/f.css">{{/if}}
 
 	<!-- toolkit styles -->
-	<link rel="stylesheet" href="{{baseurl}}/assets/toolkit/styles/toolkit.css">
+	<link rel="stylesheet" href="{{baseurl}}/assets/toolkit/styles/fontawesome-all.min.css">
+	<link rel="stylesheet" href="{{baseurl}}/assets/toolkit/styles/styles.css">
 	<!-- /toolkit styles -->
 
 </head>
+
 <body>
 
-	{{#if fabricator}}
-		{{> f-icons}}
-		{{> f-menu}}
-		<div class="f-container">
-			{{> f-control-bar}}
-	{{/if}}
-
-
-	{% body %}
-
-
-	{{#if fabricator}}
-		</div>
+	{{#if fabricator}} {{> f-icons}} {{> f-menu}}
+	<div class="f-container">
+		{{> f-control-bar}} {{/if}} {% body %} {{#if fabricator}}
+	</div>
 	<script src="{{baseurl}}/assets/fabricator/scripts/f.js"></script>
 	{{/if}}
 
@@ -37,4 +32,5 @@
 	<!-- /toolkit scripts -->
 
 </body>
+
 </html>
