@@ -67,7 +67,13 @@
 	top: $spacing-default;
 	z-index: $z-index-default;
 
+	color: $color-white;
+
 	a {
 		color: $color-white;
+	}
+
+	h2 {
+		margin: $spacing-small 0;
 	}
 }
