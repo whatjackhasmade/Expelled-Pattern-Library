@@ -1,0 +1,88 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $LIST
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Helpful mixins for defining lists.
+ */
+
+@mixin list-divided() {
+    > li {
+        @include rem(padding-bottom, $spacing-small);
+        @include rem(padding-top, $spacing-small);
+
+        border-bottom: 1px solid $color-grey;
+
+        &:last-child {
+            border: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+@mixin list-divided-opaque() {
+    > li {
+        border-color: rgba($color-grey, 0.2);
+    }
+}
+
+@mixin list-horizontal() {
+    > li {
+        display: inline-block;
+        padding-bottom: 0;
+        padding-top: 0;
+        vertical-align: middle;
+    }
+}
+
+@mixin list-horizontal-divided() {
+    > li {
+        padding-bottom: 0;
+        @include rem(padding-left, $spacing-tiny);
+        @include rem(padding-right, $spacing-tiny);
+        padding-top: 0;
+
+        border-bottom: 0; 
+        border-right: 1px solid $color-grey;
+
+        @include bp-min-width($bp-mobile) {
+            @include rem(padding-left, $spacing-small);
+            @include rem(padding-right, $spacing-small);
+        }
+
+        &:first-child {
+            padding-left: 0;
+        }
+        
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+@mixin list-horizontal-spaced() {
+    > li {
+        @include rem(margin-right, $spacing-large);
+        padding-bottom: 0;
+        padding-top: 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@mixin list-spaced() {
+    > li {
+        @include rem(padding-bottom, $spacing-default);
+        @include rem(padding-top, $spacing-default);
+    }
+}
+
+@mixin list-reset() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

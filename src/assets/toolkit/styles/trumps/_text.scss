@@ -1,0 +1,72 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $TEXT
+ * -----------------------------------------------------------------------------
+ */
+
+.text {
+	&--primary {
+		color: $color-primary;
+	}
+
+	&--secondary {
+		color: $color-secondary;
+	}
+
+	&--tertiary {
+		color: $color-tertiary;
+	}
+
+	&--quaternary {
+		color: $color-quaternary;
+	}
+
+	&--black {
+		color: $color-black;
+	}
+	&--grey {
+		color: $color-grey;
+	}
+	&--white {
+		color: $color-white;
+	}
+
+	&-align {
+		&--left {
+			text-align: left;
+		}
+		&--center {
+			text-align: center;
+		}
+		&--right {
+			text-align: right;
+		}
+	}
+
+	&--capitalize {
+		text-transform: capitalize;
+	}
+	&--uppercase {
+		text-transform: uppercase;
+	}
+
+	&--ideal {
+		max-width: 85ch;
+	}
+}
+
+.font {
+	&--default {
+		font-family: $font-family-default;
+	}
+	&--alternate {
+		font-family: $font-family-heading;
+	}
+
+	&--regular {
+		font-weight: $font-weight-default;
+	}
+	&--bold {
+		font-weight: $font-weight-bold;
+	}
+}

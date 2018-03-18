@@ -1,0 +1,35 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $BODY
+ * -----------------------------------------------------------------------------
+ */
+
+body {
+	display: flex;
+	flex-direction: column;
+	left: 0;
+	line-height: 1.5;
+	min-height: 100vh;
+	position: relative;
+
+	background-color: darken($color-primary, 10%);
+	color: $color-white;
+	font-family: $font-family-default;
+	transition: left 0.15s ease;
+
+	&.menu-mobile {
+		@include bp-max-width($bp-desktop) {
+			left: 200px;
+		}
+	}
+}
+
+::selection {
+	background: rgba($color-primary, 0.8);
+	color: $color-white;
+}
+
+//
+// * {
+//     outline: 1px dotted red;
+// }

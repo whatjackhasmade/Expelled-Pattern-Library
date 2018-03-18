@@ -1,0 +1,40 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $FORM
+ * -----------------------------------------------------------------------------
+ */
+
+form {
+	margin-top: $spacing-large;
+
+	color: $color-black;
+}
+
+label {
+	display: block;
+	margin-bottom: $spacing-small;
+
+	color: rgba($color-black, 0.7);
+	font-size: 0.8rem;
+	text-transform: uppercase;
+
+	& ~ label {
+		margin-top: $spacing-default;
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	display: block;
+	background: rgba($color-black, 0.02);
+	padding: $spacing-small;
+	border: 1px solid $color-primary;
+}
+
+textarea {
+	min-height: 200px;
+	width: 100%;
+
+	resize: vertical;
+}

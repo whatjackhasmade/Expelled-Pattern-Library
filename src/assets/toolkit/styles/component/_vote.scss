@@ -1,0 +1,26 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $VOTE
+ * -----------------------------------------------------------------------------
+ */
+
+.watch-action {
+    text-align: center;
+    .status {
+        display: none;
+    }
+}
+
+.action-like,
+.action-unlike {
+    align-items: center;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    width: 24px;
+    a {
+        display: block;
+        color: $color-black;
+        cursor: pointer;
+    }
+}

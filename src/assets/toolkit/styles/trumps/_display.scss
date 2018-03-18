@@ -1,0 +1,21 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $DISPLAY
+ * -----------------------------------------------------------------------------
+ */
+
+.display {
+	&--block {
+		display: block;
+	}
+	&--none {
+		display: none !important;
+		opacity: 0;
+	}
+	&--inline {
+		display: inline;
+	}
+	&--inline-block {
+		display: inline-block;
+	}
+}

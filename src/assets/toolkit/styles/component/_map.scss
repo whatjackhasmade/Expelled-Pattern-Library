@@ -1,0 +1,73 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $MAP
+ * -----------------------------------------------------------------------------
+ */
+
+.map {
+	min-height: calc(100vh - 92.7px);
+	height: 100%;
+	position: relative;
+}
+
+.marker {
+	height: $spacing-huge;
+	width: $spacing-huge;
+
+	background-image: url("/wp-content/themes/expelled_theme/img/icons/skull.svg");
+	background-position: center center;
+	background-size: $spacing-huge $spacing-huge;
+}
+
+.map__controls {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	left: $spacing-default;
+	position: absolute;
+	top: 0;
+	z-index: $z-index-default;
+
+	button {
+		align-items: center;
+		display: flex;
+		flex: 0 0 100%;
+		height: $spacing-large;
+		justify-content: center;
+		padding: $spacing-small;
+
+		background-color: $color-primary;
+		font-size: 1.2rem;
+		transition: 0.2s background-color ease;
+
+		@include active-states() {
+			background-color: lighten($color-primary, 10%);
+		}
+
+		& ~ button {
+			margin-top: $spacing-small;
+		}
+	}
+
+	.button--clicked {
+		background-color: lighten($color-primary, 15%);
+	}
+
+	i {
+		margin-right: $spacing-tiny;
+		min-width: 20px;
+	}
+}
+
+.map__location {
+	max-width: 400px;
+	position: absolute;
+	right: $spacing-default;
+	top: $spacing-default;
+	z-index: $z-index-default;
+
+	a {
+		color: $color-white;
+	}
+}

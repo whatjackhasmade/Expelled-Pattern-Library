@@ -1,0 +1,28 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $LIST
+ * -----------------------------------------------------------------------------
+ */
+
+.list {
+}
+
+.list--basic {
+	padding-left: 0;
+
+	list-style: none;
+}
+
+.list--horizontal {
+	padding-left: 0;
+
+	list-style: none;
+
+	li {
+		display: inline-block;
+
+		& ~ li {
+			margin-left: $spacing-small;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+colors:
+  primary:
+    Black: "hsl(0, 0%, 7%)"
+    Grey Matte: "hsl(206, 14%, 20%)"
+    Grey: "hsl(0, 0%, 35%)"
+    Grey Light: "hsl(0, 0%, 93%)"
+    White: "hsl(0, 0%, 100%)"
+  secondary:
+    Primary: "hsl(214, 75%, 11%)"
+    Secondary: "hsl(206, 68%, 17%)"
+    Tertiary: "hsl(16, 100%, 60%)"
+    Quaternary: "hsl(8, 80%, 56%)"

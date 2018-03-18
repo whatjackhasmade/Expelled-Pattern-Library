@@ -1,0 +1,29 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $SIDEBAR
+ * -----------------------------------------------------------------------------
+ */
+
+.sidebar {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding: $spacing-default;
+
+	color: $color-black;
+
+	& > * {
+		min-width: 100%;
+	}
+
+	* {
+		color: $color-black;
+	}
+}
+
+.sidebar__user {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

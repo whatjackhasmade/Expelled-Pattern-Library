@@ -1,0 +1,56 @@
+.wp-social-login-provider-list {
+	display: flex;
+	padding: 0;
+}
+
+.wp-social-login-provider-facebook,
+.wp-social-login-provider-google,
+.wp-social-login-provider-instagram,
+.wp-social-login-provider-twitter {
+	font-size: 0;
+
+	&:before {
+		align-items: center;
+		border-radius: $border-radius;
+		display: flex;
+		height: $spacing-large;
+		justify-content: center;
+		margin-right: $spacing-small;
+		width: $spacing-large;
+
+		background-color: $color-primary;
+		color: $color-white;
+		font-family: "Font Awesome\ 5 Brands", "Arial", sans-serif;
+		font-size: 1rem;
+		transition: 0.2s background-color ease;
+	}
+	@include active-states() {
+		&:before {
+			background-color: lighten($color-primary, 10%);
+		}
+	}
+}
+
+.wp-social-login-provider-facebook {
+	&:before {
+		content: "\f39e";
+	}
+}
+
+.wp-social-login-provider-google {
+	&:before {
+		content: "\f0d5";
+	}
+}
+
+.wp-social-login-provider-instagram {
+	&:before {
+		content: "\f16d";
+	}
+}
+
+.wp-social-login-provider-twitter {
+	&:before {
+		content: "\f099";
+	}
+}

@@ -1,0 +1,21 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $FOOTER
+ * -----------------------------------------------------------------------------
+ */
+
+footer {
+	align-items: flex-start;
+	display: flex;
+	padding: $spacing-default;
+
+	background-color: $color-primary;
+
+	a {
+		color: $color-white;
+
+		@include active-states() {
+			color: darken($color-white, 20%);
+		}
+	}
+}

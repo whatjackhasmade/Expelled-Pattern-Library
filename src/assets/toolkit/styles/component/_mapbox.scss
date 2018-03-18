@@ -1,0 +1,15 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $MAPBOX
+ * -----------------------------------------------------------------------------
+ */
+
+.mapboxgl-control-container label {
+    margin-top: 0;
+}
+
+body {
+    .mapbox-directions-instructions {
+        overflow: visible;
+    }
+}

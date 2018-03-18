@@ -1,0 +1,53 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $BUTTON
+ * -----------------------------------------------------------------------------
+ */
+
+[type="reset"],
+[type="submit"],
+button,
+html [type="button"] {
+	margin-top: $spacing-default;
+	padding: $spacing-small $spacing-default;
+
+	background: $color-primary;
+	border: none;
+	border-radius: $spacing-tiny;
+	color: $color-white;
+	cursor: pointer;
+	transition: 0.2s background-color ease;
+
+	@include active-states() {
+		background-color: lighten($color-primary, 10%);
+	}
+}
+
+.simplefavorite-button {
+	padding: 0;
+
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: $color-black;
+	opacity: 1;
+	transition: 0.2s opacity ease;
+
+	@include active-states() {
+		background: none;
+		opacity: 0.6;
+	}
+
+	&.active i {
+		background: -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			from(rgba(248, 188, 79, 1)),
+			to(rgba(211, 21, 87, 1))
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: rgba(211, 21, 87, 1);
+	}
+}

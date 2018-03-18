@@ -1,0 +1,77 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $GAP
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Trumps aimed specifically at the `grid` component.
+ */
+
+.gap--none {
+    @include rem(margin-bottom, $grid-gap-default);
+
+    .grid__row {
+        grid-gap: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .grid__item {
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@include bp-min-width($bp-tablet) {
+    .gap--large {
+        > .grid__row {
+            @include rem(margin-left, -$grid-gap-large);
+            @include rem(margin-right, -$grid-gap-large);
+
+            > .grid__item {
+                @include rem(margin-bottom, $grid-gap-huge);
+                @include rem(padding-left, $grid-gap-large);
+                @include rem(padding-right, $grid-gap-large);
+            }
+
+            @supports (display: grid) and (grid-auto-rows: 1px) {
+                grid-gap: $grid-gap-large;
+
+                margin-left: 0;
+                margin-right: 0;
+
+                > .grid__item {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    .gap--huge {
+        > .grid__row {
+            @include rem(margin-left, -$grid-gap-huge);
+            @include rem(margin-right, -$grid-gap-huge);
+
+            > .grid__item {
+                @include rem(margin-bottom, $grid-gap-large);
+                @include rem(padding-left, $grid-gap-huge);
+                @include rem(padding-right, $grid-gap-huge);
+            }
+
+            @supports (display: grid) and (grid-auto-rows: 1px) {
+                grid-gap: $grid-gap-huge;
+
+                margin-left: 0;
+                margin-right: 0;
+
+                > .grid__item {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}

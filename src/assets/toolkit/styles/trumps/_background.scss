@@ -1,0 +1,37 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $BACKGROUND
+ * -----------------------------------------------------------------------------
+ */
+
+.background {
+	&--primary {
+		background-color: $color-primary;
+	}
+	&--secondary {
+		background-color: $color-secondary;
+	}
+	&--tertiary {
+		background-color: $color-tertiary;
+	}
+	&--quaternary {
+		background-color: $color-quaternary;
+	}
+
+	&--black {
+		background-color: $color-black;
+	}
+	&--grey-matte {
+		background-color: $color-grey-matte;
+	}
+
+	&--repeat {
+		background-position: center center;
+	}
+
+	&--cover {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}

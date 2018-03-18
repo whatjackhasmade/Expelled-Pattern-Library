@@ -1,0 +1,138 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $VARS
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * SPACING
+ */
+
+$base-unit: 1.2rem;
+
+$spacing-tiny: $base-unit/4;
+$spacing-small: $base-unit/2;
+$spacing-default: $base-unit;
+$spacing-large: $base-unit * 2;
+$spacing-huge: $base-unit * 4;
+
+/**
+ * BORDER
+ */
+
+$border-radius: $base-unit/4;
+
+$input-border-width: 1px;
+
+/**
+ * BREAKPOINTS
+ */
+
+$bp-mobile-small: 320px;
+$bp-mobile: 375px;
+$bp-mobile-large: 425px;
+$bp-tablet-small: 600px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-desktop-medium: 1440px;
+$bp-desktop-large: 1920px;
+
+$bp-grid-stack: $bp-tablet;
+
+$bp-logo-large: 87.5em;
+
+$bp-header-toggle: 52em;
+
+/**
+ * BUTTONS
+ */
+
+$btn-tab-width: 140px;
+
+/**
+ * COLOURS
+ */
+
+$color-primary: hsl(214, 75%, 11%);
+$color-secondary: hsl(206, 68%, 17%);
+$color-tertiary: hsl(16, 100%, 60%);
+$color-quaternary: hsl(8, 80%, 56%);
+
+$color-black: hsl(0, 0%, 7%);
+$color-grey-matte: hsl(206, 14%, 20%);
+$color-grey: hsl(0, 0%, 35%);
+$color-grey-light: hsl(0, 0%, 93%);
+$color-white: hsl(0, 0%, 100%);
+
+$color-blue: $color-secondary;
+
+$color-label-default: $color-grey;
+
+$color-text-title: $color-white;
+
+$color-facebook: #3b5998;
+$color-googleplus: #dc4e41;
+$color-instagram: #e4405f;
+$color-twitter: #1da1f2;
+$color-youtube: #cd201f;
+
+/**
+ * FONT
+ */
+
+$font-family-default: "Roboto", sans-serif;
+$font-family-heading: "Knewave", sans-serif;
+
+$font-weight-bold: 700;
+$font-weight-default: 400;
+
+$font-size-heading: 3.6rem;
+$font-size-heading-mobile: 2.8rem;
+
+$font-size-heading-2: 2.8rem;
+$font-size-heading-2-mobile: 2.4rem;
+
+$font-size-heading-3: 2.4rem;
+$font-size-heading-3-mobile: 2rem;
+
+$font-size-hero: 6rem;
+$font-size-large: 1.9rem;
+$font-size-default: 1.6rem;
+$font-size-small: 1.4rem;
+
+$font-size-default-em: 1.6em;
+
+$letter-spacing-loose: 1px;
+
+$line-height-default: 1.4;
+
+/**
+ * GRID
+ */
+
+$grid-gap-default: $spacing-large;
+$grid-gap-large: $spacing-large * 1.5;
+$grid-gap-huge: $spacing-huge * 1.5;
+
+/**
+ * TRANSITION
+ */
+
+$transition-duration-default: 0.4s;
+
+/**
+ * WIDTH
+ */
+
+$width-content: 900px;
+$width-content-large: 1560px;
+$width-header-content: 1330px;
+
+/**
+ * Z-INDEX
+ */
+
+$z-index-front: 100;
+$z-index-default: 1;
+$z-index-under: -1;
+$z-index-back: -100;

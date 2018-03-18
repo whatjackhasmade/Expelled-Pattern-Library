@@ -1,0 +1,78 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $HEADING
+ * -----------------------------------------------------------------------------
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title--h1,
+.title--h2,
+.title--h3,
+.title--h4 {
+	line-height: 1.45;
+	margin-top: 0;
+
+	font-family: $font-family-heading;
+	font-weight: $font-weight-default;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+$heading-5: 16px;
+$heading-4: 20px;
+$heading-3: 24px;
+$heading-2: 30px;
+$heading-1: 40px;
+
+h1,
+.title--h1 {
+	line-height: 1.15;
+
+	font-size: $heading-2;
+}
+
+h2,
+.title--h2 {
+	line-height: 1.25;
+
+	font-size: $heading-3;
+}
+
+h3,
+.title--h3 {
+	line-height: 1.35;
+
+	font-size: $heading-4;
+}
+
+h4,
+.title--h4 {
+	font-size: $heading-5;
+}
+
+@include bp-min-width($bp-tablet) {
+	h1,
+	.title--h1 {
+		font-size: $heading-1;
+	}
+
+	h2,
+	.title--h2 {
+		font-size: $heading-2;
+	}
+
+	h3,
+	.title--h3 {
+		font-size: $heading-3;
+	}
+
+	h4,
+	.title--h4 {
+		font-size: $heading-4;
+	}
+}

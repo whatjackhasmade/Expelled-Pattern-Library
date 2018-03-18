@@ -1,0 +1,27 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $ANCHOR
+ * -----------------------------------------------------------------------------
+ */
+
+a,
+.link {
+	color: $color-blue;
+	text-decoration: none;
+
+	transition: 0.2s color ease;
+
+	@include active-states() {
+		color: lighten($color-blue, 20%);
+	}
+}
+
+.link--blend {
+	color: inherit;
+}
+
+article {
+	a {
+		text-decoration: underline;
+	}
+}

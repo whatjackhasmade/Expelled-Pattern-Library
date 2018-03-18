@@ -1,0 +1,256 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $GRID
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * To allow customisation of items within the grid, we've opted to use
+ * flexbox over grid. The grid is an 12 column grid system with the ability
+ * to have different items in the grid span a varied amount of columns.
+ */
+
+/**
+ * 1. Prevents horizontal scrollbar from showing.
+ */
+.grid {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	width: 100%;
+}
+
+.grid__row {
+	@include clearfix();
+	width: auto;
+
+	@include bp-min-width($bp-mobile-large) {
+		@include rem(margin-left, -$grid-gap-default);
+		@include rem(margin-right, -$grid-gap-default);
+
+		@supports (display: grid) and (grid-auto-rows: 1px) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	@supports (display: grid) and (grid-auto-rows: 1px) {
+		display: grid;
+
+		grid-row-gap: $grid-gap-default;
+		grid-template-columns: 1fr;
+
+		@include bp-min-width($bp-tablet) {
+			grid-gap: $grid-gap-default;
+			grid-template-columns: repeat(12, 1fr);
+		}
+	}
+}
+
+.grid__item {
+	grid-column-end: span 12;
+
+	width: 100%;
+
+	@include bp-min-width($bp-mobile-large) {
+		@include rem(padding-left, $grid-gap-default);
+		@include rem(padding-right, $grid-gap-default);
+
+		@supports (display: grid) and (grid-auto-rows: 1px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	@include bp-min-width($bp-tablet) {
+		float: left;
+		width: 33.33%;
+
+		@supports (display: grid) and (grid-auto-rows: 1px) {
+			float: none;
+			grid-column-end: span 4;
+			width: auto;
+		}
+	}
+}
+
+@include bp-min-width($bp-grid-stack) {
+	.grid__item {
+		max-width: 100%;
+	}
+
+	@for $i from 1 through 12 {
+		.grid__item--#{$i} {
+			float: left;
+			max-width: percentage($i/12);
+			width: 100%;
+		}
+	}
+
+	@supports (display: grid) and (grid-auto-rows: 1px) {
+		@for $i from 1 through 12 {
+			.grid__item--#{$i} {
+				grid-column-end: $i span;
+				max-width: 100%;
+			}
+		}
+	}
+
+	/**
+            * Shortcut modifiers for the grid.
+            */
+
+	.grid--tight > .grid__row {
+		@supports (display: grid) and (grid-auto-rows: 1px) {
+			grid-row-gap: 0;
+
+			@include bp-min-width($bp-tablet) {
+				grid-gap: 0;
+			}
+		}
+	}
+
+	.grid--double > .grid__row {
+		@supports (display: grid) and (grid-auto-rows: 1px) {
+			@include bp-min-width($bp-tablet) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+	}
+
+	.grid--double > .grid__row .grid__item {
+		float: left;
+		width: 50%;
+
+		grid-column-end: span 1;
+
+		@supports (display: grid) and (grid-auto-rows: 1px) {
+			float: none;
+			width: auto;
+		}
+	}
+
+	.grid--triple > .grid__row {
+		@supports (display: grid) and (grid-auto-rows: 1px) {
+			@include bp-min-width($bp-tablet) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+	}
+
+	.grid--triple > .grid__row .grid__item {
+		float: left;
+		width: 33.33%;
+
+		grid-column-end: span 1;
+
+		@include bp-min-width($bp-tablet) {
+			&:nth-child(4n) {
+				clear: both;
+			}
+		}
+
+		@supports (display: grid) and (grid-auto-rows: 1px) {
+			float: none;
+			width: auto;
+		}
+	}
+
+	.grid--quad > .grid__row {
+		@supports (display: grid) and (grid-auto-rows: 1px) {
+			@include bp-min-width($bp-tablet) {
+				grid-template-columns: repeat(4, 1fr);
+			}
+		}
+	}
+
+	.grid--quad > .grid__row .grid__item {
+		float: left;
+		width: 100%;
+
+		grid-column-end: span 1;
+
+		@include bp-min-width($bp-tablet) {
+			grid-column-end: span 2;
+			width: 50%;
+
+			&:nth-child(3n) {
+				clear: both;
+			}
+		}
+
+		@include bp-min-width($bp-desktop) {
+			grid-column-end: span 1;
+			width: 25%;
+
+			&:nth-child(3n) {
+				clear: none;
+			}
+
+			&:nth-child(5n) {
+				clear: both;
+			}
+		}
+
+		@supports (display: grid) and (grid-auto-rows: 1px) {
+			float: none;
+			width: auto;
+		}
+	}
+}
+
+@include bp-min-width($bp-desktop) {
+	.grid--triple > .grid__row .grid__item {
+		float: left;
+
+		@supports (display: grid) and (grid-auto-rows: 1px) {
+			float: none;
+			width: auto;
+		}
+	}
+
+	.grid--quad > .grid__row .grid__item {
+		float: left;
+
+		@supports (display: grid) and (grid-auto-rows: 1px) {
+			float: none;
+			width: auto;
+		}
+	}
+}
+
+@include bp-min-width($bp-desktop-medium) {
+	.grid--quad > .grid__row .grid__item {
+		@supports (display: grid) and (grid-auto-rows: 1px) {
+			float: none;
+		}
+	}
+}
+
+.grid--fluid {
+	> .grid__row .grid__item {
+		width: auto;
+	}
+}
+
+.stack--none {
+	> .grid__row {
+		.grid__item {
+			width: auto;
+		}
+	}
+}
+
+.stack-until--desktop {
+	> .grid__row {
+		@include bp-max-width($bp-desktop) {
+		}
+	}
+
+	.grid__item {
+		@include bp-max-width($bp-desktop) {
+			max-width: 100%;
+		}
+	}
+}

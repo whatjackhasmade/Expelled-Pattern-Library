@@ -1,0 +1,32 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $FLEX
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Utility classes for adding flexbox attributes to elements.
+ */
+
+ .flex { display: flex; }
+
+ .flex-align--center { align-items: center; }
+ .flex-align--start { align-items: flex-start; }
+ .flex-align--end { align-items: flex-end; }
+
+ .flex-direction--column { flex-direction: column; }
+ .flex-direction--column-rev { flex-direction: column-reverse; }
+ .flex-direction--row { display: flex; flex-direction: row; }
+ .flex-direction--row-rev { display: flex; flex-direction: row-reverse; }
+
+ .flex-grow { flex: 1 0 auto; }
+ .flex-grow--equal { flex: 1; }
+
+ .flex-justify--around { justify-content: space-around; }
+ .flex-justify--between { justify-content: space-between; }
+ .flex-justify--center { justify-content: center; }
+ .flex-justify--start { justify-content: flex-start; }
+ .flex-justify--end { justify-content: flex-end; }
+
+ .flex-wrap { flex-wrap: wrap; }
+ .flex-wrap--no { flex-wrap: nowrap; }

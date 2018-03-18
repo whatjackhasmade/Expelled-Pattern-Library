@@ -1,0 +1,114 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $TABLE
+ * -----------------------------------------------------------------------------
+ */
+
+table {
+    border-collapse: collapse;
+    max-width: 100%;
+    table-layout: fixed;
+    width: 100%;
+
+    text-align: left;
+
+    @include bp-max-width($bp-tablet) {
+    	tr,
+    	th,
+    	td {
+    		display: block;
+    	}
+    }
+}
+
+td,
+th {
+    padding: $spacing-default $spacing-small;
+}
+
+td {
+    &:before {
+        @include bp-max-width($bp-tablet) {
+            content: attr(data-title) ": ";
+        }
+    }
+}
+
+th {
+    background-color: darken($color-white, 4.5%);
+    font-family: $font-family-heading;
+    font-weight: $font-weight-bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+tr {
+    background-color: $color-white;
+    border-top: 1px solid darken($color-white, 7.5%);
+    transition: background-color 0.2s ease;
+
+    @include active-states() {
+        background-color: #F5F8FC;
+
+        .table__actions * {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+    .table__actions {
+        a {
+            display: inline-block;
+
+            color: $color-blue;
+            padding: 0 $spacing-tiny;
+            margin: 0 $spacing-tiny;
+            text-decoration: none;
+
+            & ~ a {
+                position: relative;
+
+                &:before {
+                    content: "";
+                    display: block;
+                    height: 50%;
+                    left: -$spacing-tiny;
+                    position: absolute;
+                    top: 25%;
+                    width: 1px;
+
+                    background-color: rgba($color-blue, 0.4);
+                }
+            }
+
+            @include active-states() {
+                color: darken($color-blue, 20%);
+            }
+        }
+
+        & * {
+            opacity: 0;
+            transition: 0.2s opacity ease;
+            visibility: hidden;
+        }
+    }
+
+    .table__currency {
+        text-align: right;
+    }
+
+.table--expand {
+    td {
+        height: 40px;
+        transition: 0.4s height ease;
+    }
+
+    tr {
+        @include active-states() {
+            td {
+                height: 300px;
+            }
+        }
+    }
+}
