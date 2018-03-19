@@ -1,0 +1,146 @@
+/**
+ * -----------------------------------------------------------------------------
+ * JUMBOTRON
+ * -----------------------------------------------------------------------------
+ */
+
+.hero--slider {
+    height: 50vh;
+    position: relative;
+    z-index: -3;
+
+    background-color: #2f297e;
+
+    background-image:
+    url("/assets/toolkit/images/photographs/photographs/skate-1.jpeg"),
+    url("/assets/toolkit/images/photographs/photographs/skate-1.jpeg"),
+    url("/assets/toolkit/images/photographs/photographs/skate-1.jpeg"),
+    url("/assets/toolkit/images/photographs/photographs/skate-1.jpeg"),
+    url("/assets/toolkit/images/photographs/photographs/skate-1.jpeg"),
+    url("/assets/toolkit/images/photographs/photographs/skate-1.jpeg");
+    background-position: 0 0, 100vw 0, 100vw 0, 100vw 0, 100vw 0, 100vw 0;
+    background-size: 100%;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+
+    -webkit-animation: backgroundAnimation 60s linear infinite;
+    animation: backgroundAnimation 60s linear infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.hero--slider > * {
+    position: relative;
+    z-index: 100;
+}
+
+
+
+.hero--slider:before {
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+
+    background-image: url('https://cdn2.hubspot.net/hubfs/478011/Landing%20Pages/Landing%20Img/gradient.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+@supports (mix-blend-mode: overlay) {
+    .hero--slider:before {
+        mix-blend-mode: multiply;
+        opacity: 1;
+    }
+
+}
+
+@-webkit-keyframes backgroundAnimation {
+  0% {
+    background-position: 0 0, 100vw 0, 100vw 0, 100vw 0, 100vw 0, 100vw 0;
+  }
+  10% {
+    background-position: 0 0, 100vw 0, 100vw 0, 100vw 0, 100vw 0, 100vw 0;
+  }
+  16.6% {
+    background-position: -100vw 0, 0 0, 100vw 0, 100vw 0, 100vw 0, 100vw 0;
+  }
+  26.6% {
+    background-position: -100vw 0, 0 0, 100vw 0, 100vw 0, 100vw 0, 100vw 0;
+  }
+  33.2% {
+    background-position: -100vw 100vh, -100vw 0, 0 0, 100vw 0, 100vw 0, 100vw 0;
+  }
+  43.2% {
+    background-position: -100vw 100vh, -100vw 0, 0 0, 100vw 0, 100vw 0, 100vw 0;
+  }
+  50% {
+    background-position: -100vw 100vh, -100vw 0, -100vw 0, 0 0, 100vw 0, 100vw 0;
+  }
+  60% {
+    background-position: -100vw 100vh, -100vw 0, -100vw 0, 0 0, 100vw 0, 100vw 0;
+  }
+  66.6% {
+    background-position: 100vw 100vh, -100vw 0, -100vw 0, -100vw 0, 0 0, 100vw 0;
+  }
+  76.6% {
+    background-position: 100vw 100vh, -100vw 0, -100vw 0, -100vw 0, 0 0, 100vw 0;
+  }
+  83.3% {
+    background-position: 100vw 0, -100vw 0, -100vw 0, -100vw 0, -100vw 0, 0 0;
+  }
+  93.3% {
+    background-position: 100vw 0, -100vw 0, -100vw 0, -100vw 0, -100vw 0, 0 0;
+  }
+  100% {
+    background-position: 0 0, -100vw 0, -100vw 0, -100vw 0, -100vw 0, -100vw 0;
+  }
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0 0, 100vw 0, 100vw 0, 100vw 0, 100vw 0, 100vw 0;
+  }
+  10% {
+    background-position: 0 0, 100vw 0, 100vw 0, 100vw 0, 100vw 0, 100vw 0;
+  }
+  16.6% {
+    background-position: -100vw 0, 0 0, 100vw 0, 100vw 0, 100vw 0, 100vw 0;
+  }
+  26.6% {
+    background-position: -100vw 0, 0 0, 100vw 0, 100vw 0, 100vw 0, 100vw 0;
+  }
+  33.2% {
+    background-position: -100vw 100vh, -100vw 0, 0 0, 100vw 0, 100vw 0, 100vw 0;
+  }
+  43.2% {
+    background-position: -100vw 100vh, -100vw 0, 0 0, 100vw 0, 100vw 0, 100vw 0;
+  }
+  50% {
+    background-position: -100vw 100vh, -100vw 0, -100vw 0, 0 0, 100vw 0, 100vw 0;
+  }
+  60% {
+    background-position: -100vw 100vh, -100vw 0, -100vw 0, 0 0, 100vw 0, 100vw 0;
+  }
+  66.6% {
+    background-position: 100vw 100vh, -100vw 0, -100vw 0, -100vw 0, 0 0, 100vw 0;
+  }
+  76.6% {
+    background-position: 100vw 100vh, -100vw 0, -100vw 0, -100vw 0, 0 0, 100vw 0;
+  }
+  83.3% {
+    background-position: 100vw 0, -100vw 0, -100vw 0, -100vw 0, -100vw 0, 0 0;
+  }
+  93.3% {
+    background-position: 100vw 0, -100vw 0, -100vw 0, -100vw 0, -100vw 0, 0 0;
+  }
+  100% {
+    background-position: 0 0, -100vw 0, -100vw 0, -100vw 0, -100vw 0, -100vw 0;
+  }
+}

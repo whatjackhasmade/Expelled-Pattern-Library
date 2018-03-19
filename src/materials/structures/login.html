@@ -2,11 +2,11 @@
     <form name="loginform" id="loginform" action="<?php echo home_url();?>/wp-login.php" method="post">
         <p class="login-username">
             <label for="user_login">Username</label>
-            <input type="text" name="log" id="user_login" class="input" value="" size="20">
+            <input type="text" name="log" id="user_login" class="input" value="" size="20" required>
         </p>
         <p class="login-password">
             <label for="user_pass">Password</label>
-            <input type="password" name="pwd" id="user_pass" class="input" value="" size="20">
+            <input type="password" name="pwd" id="user_pass" class="input" value="" size="20" required>
         </p>
         <p class="login-remember">
             <input id="rememberme" type="checkbox" name="rememberme" value="forever" checked="checked">

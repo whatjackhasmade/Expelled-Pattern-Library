@@ -110,6 +110,9 @@
 					<a href="structures.html#header">Header</a>
 				</li>
 				<li>
+					<a href="structures.html#jumbotron">Jumbotron</a>
+				</li>
+				<li>
 					<a href="structures.html#login">Login</a>
 				</li>
 				<li>
@@ -540,6 +543,32 @@
 </div>
 
 
+<div class="f-item-group" id="jumbotron">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Jumbotron</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="hero hero--slider">
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;hero hero--slider&quot;&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
 <div class="f-item-group" id="login">
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
@@ -558,11 +587,11 @@
 	<form name="loginform" id="loginform" action="<?php echo home_url();?>/wp-login.php" method="post">
 		<p class="login-username">
 			<label for="user_login">Username</label>
-			<input type="text" name="log" id="user_login" class="input" value="" size="20">
+			<input type="text" name="log" id="user_login" class="input" value="" size="20" required>
 		</p>
 		<p class="login-password">
 			<label for="user_pass">Password</label>
-			<input type="password" name="pwd" id="user_pass" class="input" value="" size="20">
+			<input type="password" name="pwd" id="user_pass" class="input" value="" size="20" required>
 		</p>
 		<p class="login-remember">
 			<input id="rememberme" type="checkbox" name="rememberme" value="forever" checked="checked">
@@ -603,11 +632,11 @@
 	&lt;form name&#x3D;&quot;loginform&quot; id&#x3D;&quot;loginform&quot; action&#x3D;&quot;&lt;?php echo home_url();?&gt;/wp-login.php&quot; method&#x3D;&quot;post&quot;&gt;
 		&lt;p class&#x3D;&quot;login-username&quot;&gt;
 			&lt;label for&#x3D;&quot;user_login&quot;&gt;Username&lt;/label&gt;
-			&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;log&quot; id&#x3D;&quot;user_login&quot; class&#x3D;&quot;input&quot; value&#x3D;&quot;&quot; size&#x3D;&quot;20&quot;&gt;
+			&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;log&quot; id&#x3D;&quot;user_login&quot; class&#x3D;&quot;input&quot; value&#x3D;&quot;&quot; size&#x3D;&quot;20&quot; required&gt;
 		&lt;/p&gt;
 		&lt;p class&#x3D;&quot;login-password&quot;&gt;
 			&lt;label for&#x3D;&quot;user_pass&quot;&gt;Password&lt;/label&gt;
-			&lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;pwd&quot; id&#x3D;&quot;user_pass&quot; class&#x3D;&quot;input&quot; value&#x3D;&quot;&quot; size&#x3D;&quot;20&quot;&gt;
+			&lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;pwd&quot; id&#x3D;&quot;user_pass&quot; class&#x3D;&quot;input&quot; value&#x3D;&quot;&quot; size&#x3D;&quot;20&quot; required&gt;
 		&lt;/p&gt;
 		&lt;p class&#x3D;&quot;login-remember&quot;&gt;
 			&lt;input id&#x3D;&quot;rememberme&quot; type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;rememberme&quot; value&#x3D;&quot;forever&quot; checked&#x3D;&quot;checked&quot;&gt;
@@ -738,15 +767,15 @@
 	<div style="max-width: 400px;">
 	<form id="wp_signup_form" action="/register/" method="post">
 		<label for="username">Username</label>
-		<input type="text" name="username" id="username">
+		<input type="text" name="username" id="username" required>
 		<label for="email">Email address</label>
-		<input type="text" name="email" id="email">
+		<input type="text" name="email" id="email required">
 		<label for="password">Password</label>
-		<input type="password" name="password" id="password">
+		<input type="password" name="password" id="password" required>
 		<label for="password_confirmation">Confirm Password</label>
-		<input type="password" name="password_confirmation" id="password_confirmation">
+		<input type="password" name="password_confirmation" id="password_confirmation" required>
 
-		<input name="terms" id="terms" type="checkbox" value="Yes">
+		<input name="terms" id="terms" type="checkbox" value="Yes" required>
 		<label for="terms">I agree to the Terms of Service</label>
 
 		<input type="submit" id="submitbtn" name="submit" value="Sign Up">
@@ -757,15 +786,15 @@
 	<pre><code class="language-markup">&lt;div style&#x3D;&quot;max-width: 400px;&quot;&gt;
 	&lt;form id&#x3D;&quot;wp_signup_form&quot; action&#x3D;&quot;/register/&quot; method&#x3D;&quot;post&quot;&gt;
 		&lt;label for&#x3D;&quot;username&quot;&gt;Username&lt;/label&gt;
-		&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;username&quot; id&#x3D;&quot;username&quot;&gt;
+		&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;username&quot; id&#x3D;&quot;username&quot; required&gt;
 		&lt;label for&#x3D;&quot;email&quot;&gt;Email address&lt;/label&gt;
-		&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;email&quot; id&#x3D;&quot;email&quot;&gt;
+		&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;email&quot; id&#x3D;&quot;email required&quot;&gt;
 		&lt;label for&#x3D;&quot;password&quot;&gt;Password&lt;/label&gt;
-		&lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot; id&#x3D;&quot;password&quot;&gt;
+		&lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot; id&#x3D;&quot;password&quot; required&gt;
 		&lt;label for&#x3D;&quot;password_confirmation&quot;&gt;Confirm Password&lt;/label&gt;
-		&lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;password_confirmation&quot; id&#x3D;&quot;password_confirmation&quot;&gt;
+		&lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;password_confirmation&quot; id&#x3D;&quot;password_confirmation&quot; required&gt;
 
-		&lt;input name&#x3D;&quot;terms&quot; id&#x3D;&quot;terms&quot; type&#x3D;&quot;checkbox&quot; value&#x3D;&quot;Yes&quot;&gt;
+		&lt;input name&#x3D;&quot;terms&quot; id&#x3D;&quot;terms&quot; type&#x3D;&quot;checkbox&quot; value&#x3D;&quot;Yes&quot; required&gt;
 		&lt;label for&#x3D;&quot;terms&quot;&gt;I agree to the Terms of Service&lt;/label&gt;
 
 		&lt;input type&#x3D;&quot;submit&quot; id&#x3D;&quot;submitbtn&quot; name&#x3D;&quot;submit&quot; value&#x3D;&quot;Sign Up&quot;&gt;

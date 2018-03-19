@@ -1,15 +1,15 @@
 <div style="max-width: 400px;">
     <form id="wp_signup_form" action="/register/" method="post">
 		<label for="username">Username</label>
-		<input type="text" name="username" id="username">
+		<input type="text" name="username" id="username" required>
 		<label for="email">Email address</label>
-		<input type="text" name="email" id="email">
+		<input type="text" name="email" id="email required">
 		<label for="password">Password</label>
-		<input type="password" name="password" id="password">
+		<input type="password" name="password" id="password" required>
 		<label for="password_confirmation">Confirm Password</label>
-		<input type="password" name="password_confirmation" id="password_confirmation">
+		<input type="password" name="password_confirmation" id="password_confirmation" required>
 
-		<input name="terms" id="terms" type="checkbox" value="Yes">
+		<input name="terms" id="terms" type="checkbox" value="Yes" required>
 		<label for="terms">I agree to the Terms of Service</label>
 
 		<input type="submit" id="submitbtn" name="submit" value="Sign Up">
