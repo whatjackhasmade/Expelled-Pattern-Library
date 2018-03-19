@@ -64,11 +64,20 @@ button[disabled],
 }
 
 .button--primary {
-	border: 2px solid transparent;
-
 	&:focus {
-		box-shadow: inset 0px 0px 0 1px $color-white;
 		outline: none;
+
+		&:after {
+			content: "";
+			height: calc(100% - #{$spacing-tiny});
+			left: $spacing-tiny/2;
+			position: absolute;
+			top: $spacing-tiny/2;
+    		width: calc(100% - 0.275rem);
+
+			border: 1px solid white;
+			border-radius: $spacing-tiny;
+		}
 	}
 }
 
@@ -76,6 +85,22 @@ button[disabled],
 	background: $color-white;
 	border: 1px solid $color-tertiary;
 	color: $color-tertiary;
+
+	&:focus {
+		outline: none;
+
+		&:after {
+			content: "";
+			height: calc(100% - #{$spacing-tiny});
+			left: $spacing-tiny/2;
+			position: absolute;
+			top: $spacing-tiny/2.4;
+    		width: calc(100% - 0.275rem);
+
+			border: 1px solid $color-tertiary;
+			border-radius: $spacing-tiny;
+		}
+	}
 }
 
 .simplefavorite-button {
