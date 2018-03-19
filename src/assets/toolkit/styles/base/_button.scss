@@ -27,7 +27,7 @@ button,
 	cursor: pointer;
 	font-weight: $font-weight-bold;
 
-	@include active-states() {
+	&:hover {
 		&:before {
 			opacity: 0.3;
 		}
@@ -56,10 +56,19 @@ button[disabled],
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7c7c7', endColorstr='#c1c1c1',GradientType=0 );
 	cursor: initial;
 
-	@include active-states() {
+	&:hover {
 		&:before {
 			opacity: 0;
 		}
+	}
+}
+
+.button--primary {
+	border: 2px solid transparent;
+
+	&:focus {
+		box-shadow: inset 0px 0px 0 1px $color-white;
+		outline: none;
 	}
 }
 
