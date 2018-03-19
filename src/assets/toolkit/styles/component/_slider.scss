@@ -1,0 +1,101 @@
+/***
+ * -----------------------------------------------------------------------------
+ * $SLIDER
+ * -----------------------------------------------------------------------------
+ */
+
+.slider {
+    align-items: center;
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    z-index: -3;
+
+    animation: backgroundAnimation 60s linear infinite;
+    animation-timing-function: ease-in-out;
+    background-color: $color-secondary;
+    color: $color-white;
+    text-shadow: 0px 2px 10px rgba($color-black, 0.4);
+}
+
+.slider > * {
+    position: relative;
+    z-index: $z-index-front + 1;
+}
+
+.slider > .slider__images {
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    z-index: $z-index-default;
+
+    list-style: none;
+
+    li {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translate(0px, 0px);
+        width: 100%;
+
+        animation: myship 15s infinite;
+    }
+
+    @for $i from 1 through 10 {
+        li:nth-of-type(#{$i}) {
+            animation-delay: #{$i*5}s;
+            z-index: 100 - $i;
+        }
+    }
+}
+
+.slider:before {
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: $z-index-front;
+
+    background: linear-gradient(111.97838430426714deg, $color-secondary 4.927083333333334%, $color-tertiary 97.84374999999999%);
+    opacity: 0.7;
+}
+
+@supports (mix-blend-mode: multiply) {
+    .slider:before {
+        mix-blend-mode: multiply;
+        opacity: 1;
+    }
+}
+
+@supports (mix-blend-mode: lighten) {
+    .slider--lighten:before {
+        mix-blend-mode: lighten;
+        opacity: 1;
+    }
+}
+
+@supports (mix-blend-mode: overlay) {
+    .slider--overlay:before {
+        mix-blend-mode: overlay;
+        opacity: 1;
+    }
+}
+
+@keyframes myship{
+    0% { transform: translate(0%, 0px); }
+    33% { transform: translate(-100%, 0px); }
+    66.66% { transform: translate(-100%, 100vh); }
+    66.67% { transform: translate(100%, 100vh); }
+    66.68% { transform: translate(100%, 0%); }
+    66.69% { transform: translate(0%, 0px); z-index: 1; }
+    100% { transform: translate(0%, 0px); z-index: 1; }
+}
