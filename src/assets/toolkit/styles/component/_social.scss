@@ -8,6 +8,7 @@
 .wp-social-login-provider-instagram,
 .wp-social-login-provider-twitter {
 	font-size: 0;
+	position: relative;
 
 	&:before {
 		align-items: center;
@@ -18,16 +19,38 @@
 		margin-right: $spacing-small;
 		width: $spacing-large;
 
-		background-color: $color-primary;
+
+		background: $color-tertiary;
+		background: -moz-linear-gradient(top, $color-tertiary 0%, $color-quaternary 100%);
+		background: -webkit-linear-gradient(top, $color-tertiary 0%, $color-quaternary 100%);
+		background: linear-gradient(to bottom, $color-tertiary 0%, $color-quaternary 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6933', endColorstr='#e94d35',GradientType=0 );
+		border: none;
+		border-radius: $spacing-tiny;
 		color: $color-white;
+		cursor: pointer;
 		font-family: "Font Awesome\ 5 Brands", "Arial", sans-serif;
 		font-size: 1rem;
-		transition: 0.2s background-color ease;
+		font-weight: $font-weight-bold;
 	}
-	@include active-states() {
-		&:before {
-			background-color: lighten($color-primary, 10%);
+
+	&:hover {
+		&:after {
+			opacity: 0.3;
 		}
+	}
+
+	&:after {
+		content: "";
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+
+		background-color: $color-white;
+		opacity: 0;
+		transition: 0.2s opacity ease;
 	}
 }
 
