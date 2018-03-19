@@ -453,8 +453,7 @@
 	</div>
 <div class="f-item-preview">
 	<div style="max-width: 400px;">
-	<h1>Account Login</h1>
-	<form name="loginform" id="loginform" action="/wp-login.php" method="post">
+	<form name="loginform" id="loginform" action="<?php echo home_url();?>/wp-login.php" method="post">
 		<p class="login-username">
 			<label for="user_login">Username</label>
 			<input type="text" name="log" id="user_login" class="input" value="" size="20">
@@ -463,40 +462,43 @@
 			<label for="user_pass">Password</label>
 			<input type="password" name="pwd" id="user_pass" class="input" value="" size="20">
 		</p>
-		<p class="login-remember"><label><input name="rememberme" type="checkbox" id="rememberme" value="forever" checked="checked"> Remember Me</label></p>
-		<p class="login-submit">
-			<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Log In">
-			<input type="hidden" name="redirect_to" value="/">
+		<p class="login-remember">
+			<input id="rememberme" type="checkbox" name="rememberme" value="forever" checked="checked">
+			<label for="rememberme">
+                <span class="label-text">Remember Me</span>
+            </label>
 		</p>
-	</form>
-	<div class="wp-social-login-widget">
-		<div class="wp-social-login-connect-with"></div>
-		<div class="wp-social-login-provider-list">
-			<a rel="nofollow" href="/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Facebook&amp;redirect_to=https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook"
-			 data-provider="Facebook">
-    			Facebook
-    		</a>
-			<a rel="nofollow" href="/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Google&amp;redirect_to=https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google"
-			 data-provider="Google">
-    			Google
-    		</a>
-			<a rel="nofollow" href="/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Twitter&amp;redirect_to=https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter"
-			 data-provider="Twitter">
-    			Twitter
-    		</a>
-			<a rel="nofollow" href="/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Instagram&amp;redirect_to=https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F" title="Connect with Instagram" class="wp-social-login-provider wp-social-login-provider-instagram"
-			 data-provider="Instagram">
-    			Instagram
-    		</a>
+		<div class="wp-social-login-widget">
+			<p class="login-submit">
+				<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary margin--none" value="Log In">
+				<input type="hidden" name="redirect_to" value="<?php echo home_url();?>">
+			</p>
+			<div class="wp-social-login-provider-list">
+				<a rel="nofollow" href="<?php echo home_url();?>/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Facebook&amp;redirect_to=https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook"
+				 data-provider="Facebook">
+                    Facebook
+                </a>
+				<a rel="nofollow" href="<?php echo home_url();?>/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Google&amp;redirect_to=https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google"
+				 data-provider="Google">
+                    Google
+                </a>
+				<a rel="nofollow" href="<?php echo home_url();?>/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Twitter&amp;redirect_to=https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter"
+				 data-provider="Twitter">
+                    Twitter
+                </a>
+				<a rel="nofollow" href="<?php echo home_url();?>/wp-login.php?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Instagram&amp;redirect_to=https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F" title="Connect with Instagram" class="wp-social-login-provider wp-social-login-provider-instagram"
+				 data-provider="Instagram">
+                    Instagram
+                </a>
+			</div>
+			<div class="wp-social-login-widget-clearing"></div>
 		</div>
-		<div class="wp-social-login-widget-clearing"></div>
-	</div>
+	</form>
 </div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div style&#x3D;&quot;max-width: 400px;&quot;&gt;
-	&lt;h1&gt;Account Login&lt;/h1&gt;
-	&lt;form name&#x3D;&quot;loginform&quot; id&#x3D;&quot;loginform&quot; action&#x3D;&quot;/wp-login.php&quot; method&#x3D;&quot;post&quot;&gt;
+	&lt;form name&#x3D;&quot;loginform&quot; id&#x3D;&quot;loginform&quot; action&#x3D;&quot;&lt;?php echo home_url();?&gt;/wp-login.php&quot; method&#x3D;&quot;post&quot;&gt;
 		&lt;p class&#x3D;&quot;login-username&quot;&gt;
 			&lt;label for&#x3D;&quot;user_login&quot;&gt;Username&lt;/label&gt;
 			&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;log&quot; id&#x3D;&quot;user_login&quot; class&#x3D;&quot;input&quot; value&#x3D;&quot;&quot; size&#x3D;&quot;20&quot;&gt;
@@ -505,34 +507,38 @@
 			&lt;label for&#x3D;&quot;user_pass&quot;&gt;Password&lt;/label&gt;
 			&lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;pwd&quot; id&#x3D;&quot;user_pass&quot; class&#x3D;&quot;input&quot; value&#x3D;&quot;&quot; size&#x3D;&quot;20&quot;&gt;
 		&lt;/p&gt;
-		&lt;p class&#x3D;&quot;login-remember&quot;&gt;&lt;label&gt;&lt;input name&#x3D;&quot;rememberme&quot; type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;rememberme&quot; value&#x3D;&quot;forever&quot; checked&#x3D;&quot;checked&quot;&gt; Remember Me&lt;/label&gt;&lt;/p&gt;
-		&lt;p class&#x3D;&quot;login-submit&quot;&gt;
-			&lt;input type&#x3D;&quot;submit&quot; name&#x3D;&quot;wp-submit&quot; id&#x3D;&quot;wp-submit&quot; class&#x3D;&quot;button button-primary&quot; value&#x3D;&quot;Log In&quot;&gt;
-			&lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;redirect_to&quot; value&#x3D;&quot;/&quot;&gt;
+		&lt;p class&#x3D;&quot;login-remember&quot;&gt;
+			&lt;input id&#x3D;&quot;rememberme&quot; type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;rememberme&quot; value&#x3D;&quot;forever&quot; checked&#x3D;&quot;checked&quot;&gt;
+			&lt;label for&#x3D;&quot;rememberme&quot;&gt;
+                &lt;span class&#x3D;&quot;label-text&quot;&gt;Remember Me&lt;/span&gt;
+            &lt;/label&gt;
 		&lt;/p&gt;
-	&lt;/form&gt;
-	&lt;div class&#x3D;&quot;wp-social-login-widget&quot;&gt;
-		&lt;div class&#x3D;&quot;wp-social-login-connect-with&quot;&gt;&lt;/div&gt;
-		&lt;div class&#x3D;&quot;wp-social-login-provider-list&quot;&gt;
-			&lt;a rel&#x3D;&quot;nofollow&quot; href&#x3D;&quot;/wp-login.php?action&#x3D;wordpress_social_authenticate&amp;amp;mode&#x3D;login&amp;amp;provider&#x3D;Facebook&amp;amp;redirect_to&#x3D;https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F&quot; title&#x3D;&quot;Connect with Facebook&quot; class&#x3D;&quot;wp-social-login-provider wp-social-login-provider-facebook&quot;
-			 data-provider&#x3D;&quot;Facebook&quot;&gt;
-    			Facebook
-    		&lt;/a&gt;
-			&lt;a rel&#x3D;&quot;nofollow&quot; href&#x3D;&quot;/wp-login.php?action&#x3D;wordpress_social_authenticate&amp;amp;mode&#x3D;login&amp;amp;provider&#x3D;Google&amp;amp;redirect_to&#x3D;https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F&quot; title&#x3D;&quot;Connect with Google&quot; class&#x3D;&quot;wp-social-login-provider wp-social-login-provider-google&quot;
-			 data-provider&#x3D;&quot;Google&quot;&gt;
-    			Google
-    		&lt;/a&gt;
-			&lt;a rel&#x3D;&quot;nofollow&quot; href&#x3D;&quot;/wp-login.php?action&#x3D;wordpress_social_authenticate&amp;amp;mode&#x3D;login&amp;amp;provider&#x3D;Twitter&amp;amp;redirect_to&#x3D;https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F&quot; title&#x3D;&quot;Connect with Twitter&quot; class&#x3D;&quot;wp-social-login-provider wp-social-login-provider-twitter&quot;
-			 data-provider&#x3D;&quot;Twitter&quot;&gt;
-    			Twitter
-    		&lt;/a&gt;
-			&lt;a rel&#x3D;&quot;nofollow&quot; href&#x3D;&quot;/wp-login.php?action&#x3D;wordpress_social_authenticate&amp;amp;mode&#x3D;login&amp;amp;provider&#x3D;Instagram&amp;amp;redirect_to&#x3D;https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F&quot; title&#x3D;&quot;Connect with Instagram&quot; class&#x3D;&quot;wp-social-login-provider wp-social-login-provider-instagram&quot;
-			 data-provider&#x3D;&quot;Instagram&quot;&gt;
-    			Instagram
-    		&lt;/a&gt;
+		&lt;div class&#x3D;&quot;wp-social-login-widget&quot;&gt;
+			&lt;p class&#x3D;&quot;login-submit&quot;&gt;
+				&lt;input type&#x3D;&quot;submit&quot; name&#x3D;&quot;wp-submit&quot; id&#x3D;&quot;wp-submit&quot; class&#x3D;&quot;button button-primary margin--none&quot; value&#x3D;&quot;Log In&quot;&gt;
+				&lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;redirect_to&quot; value&#x3D;&quot;&lt;?php echo home_url();?&gt;&quot;&gt;
+			&lt;/p&gt;
+			&lt;div class&#x3D;&quot;wp-social-login-provider-list&quot;&gt;
+				&lt;a rel&#x3D;&quot;nofollow&quot; href&#x3D;&quot;&lt;?php echo home_url();?&gt;/wp-login.php?action&#x3D;wordpress_social_authenticate&amp;amp;mode&#x3D;login&amp;amp;provider&#x3D;Facebook&amp;amp;redirect_to&#x3D;https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F&quot; title&#x3D;&quot;Connect with Facebook&quot; class&#x3D;&quot;wp-social-login-provider wp-social-login-provider-facebook&quot;
+				 data-provider&#x3D;&quot;Facebook&quot;&gt;
+                    Facebook
+                &lt;/a&gt;
+				&lt;a rel&#x3D;&quot;nofollow&quot; href&#x3D;&quot;&lt;?php echo home_url();?&gt;/wp-login.php?action&#x3D;wordpress_social_authenticate&amp;amp;mode&#x3D;login&amp;amp;provider&#x3D;Google&amp;amp;redirect_to&#x3D;https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F&quot; title&#x3D;&quot;Connect with Google&quot; class&#x3D;&quot;wp-social-login-provider wp-social-login-provider-google&quot;
+				 data-provider&#x3D;&quot;Google&quot;&gt;
+                    Google
+                &lt;/a&gt;
+				&lt;a rel&#x3D;&quot;nofollow&quot; href&#x3D;&quot;&lt;?php echo home_url();?&gt;/wp-login.php?action&#x3D;wordpress_social_authenticate&amp;amp;mode&#x3D;login&amp;amp;provider&#x3D;Twitter&amp;amp;redirect_to&#x3D;https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F&quot; title&#x3D;&quot;Connect with Twitter&quot; class&#x3D;&quot;wp-social-login-provider wp-social-login-provider-twitter&quot;
+				 data-provider&#x3D;&quot;Twitter&quot;&gt;
+                    Twitter
+                &lt;/a&gt;
+				&lt;a rel&#x3D;&quot;nofollow&quot; href&#x3D;&quot;&lt;?php echo home_url();?&gt;/wp-login.php?action&#x3D;wordpress_social_authenticate&amp;amp;mode&#x3D;login&amp;amp;provider&#x3D;Instagram&amp;amp;redirect_to&#x3D;https%3A%2F%2Flocal-expelledskate.co.uk%2Flogin%2F&quot; title&#x3D;&quot;Connect with Instagram&quot; class&#x3D;&quot;wp-social-login-provider wp-social-login-provider-instagram&quot;
+				 data-provider&#x3D;&quot;Instagram&quot;&gt;
+                    Instagram
+                &lt;/a&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;wp-social-login-widget-clearing&quot;&gt;&lt;/div&gt;
 		&lt;/div&gt;
-		&lt;div class&#x3D;&quot;wp-social-login-widget-clearing&quot;&gt;&lt;/div&gt;
-	&lt;/div&gt;
+	&lt;/form&gt;
 &lt;/div&gt;</code></pre>
 </div>
 

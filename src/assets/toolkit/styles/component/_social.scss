@@ -7,11 +7,12 @@
 .wp-social-login-widget {
 	align-items: center;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .wp-social-login-provider-list {
 	display: flex;
+	margin-left: auto;
 	padding: 0;
 }
 
@@ -28,9 +29,8 @@
 		display: flex;
 		height: $spacing-large;
 		justify-content: center;
-		margin-right: $spacing-small;
+		margin-left: $spacing-small;
 		width: $spacing-large;
-
 
 		background: $color-tertiary;
 		background: -moz-linear-gradient(top, $color-tertiary 0%, $color-quaternary 100%);
