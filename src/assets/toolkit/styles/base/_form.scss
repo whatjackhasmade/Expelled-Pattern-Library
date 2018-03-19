@@ -23,13 +23,25 @@ label {
 	}
 }
 
-input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="number"],
+input[type="password"],
+input[type="text"] {
+	border-radius: $border-radius;
 	display: block;
-	background: rgba($color-black, 0.02);
-	padding: $spacing-small;
-	border: 1px solid $color-primary;
+	min-height: 44px;
+	padding: $spacing-small $spacing-default;
+	width: 100%;
+
+	background: $color-white;
+	border: 1px solid $color-grey-light;
+	color: $color-grey;
+	transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+input[readonly] {
+	background: #F1F1F1;
+    cursor: not-allowed;
 }
 
 textarea {
@@ -39,6 +51,7 @@ textarea {
 	resize: vertical;
 }
 
+input[type="checkbox"],
 input[type="radio"] {
 	display: none;
 
@@ -55,9 +68,9 @@ input[type="radio"] {
 
 	&:checked {
 		& + label {
-			background-color: $color-grey-light;
-			border-color: $color-primary;
-			color: $color-secondary;
+			background-color: $color-quaternary;
+			border-color: $color-quaternary;
+			color: $color-white;
 			font-weight: $font-weight-bold;
 		}
 	}

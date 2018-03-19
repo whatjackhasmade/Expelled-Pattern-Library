@@ -54,8 +54,8 @@ button[disabled],
 	background: -webkit-linear-gradient(top, #c7c7c7 0%,#c1c1c1 100%);
 	background: linear-gradient(to bottom, #c7c7c7 0%,#c1c1c1 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7c7c7', endColorstr='#c1c1c1',GradientType=0 );
-	cursor: initial;
-
+    cursor: not-allowed;
+	
 	&:hover {
 		&:before {
 			opacity: 0;
