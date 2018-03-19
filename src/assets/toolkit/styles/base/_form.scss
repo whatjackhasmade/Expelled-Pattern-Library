@@ -26,7 +26,8 @@ label {
 input[type="email"],
 input[type="number"],
 input[type="password"],
-input[type="text"] {
+input[type="text"],
+select {
 	border-radius: $border-radius;
 	display: block;
 	min-height: 44px;
