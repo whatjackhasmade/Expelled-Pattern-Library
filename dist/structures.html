@@ -115,6 +115,9 @@
 				<li>
 					<a href="structures.html#map">Map</a>
 				</li>
+				<li>
+					<a href="structures.html#signup">Signup</a>
+				</li>
 			</ul>
 		</li>
 
@@ -292,16 +295,14 @@
 <div class="f-item-preview">
 	<form action="">
 	<div>
-		<label for="textInput">Text input</label>
-		<input type="text" id="textInput" /> </div>
-	<button class="button">Submit</button></form>
+	</div>
+</form>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;form action&#x3D;&quot;&quot;&gt;
 	&lt;div&gt;
-		&lt;label for&#x3D;&quot;textInput&quot;&gt;Text input&lt;/label&gt;
-		&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;textInput&quot; /&gt; &lt;/div&gt;
-	&lt;button class&#x3D;&quot;button&quot;&gt;Submit&lt;/button&gt;&lt;/form&gt;</code></pre>
+	&lt;/div&gt;
+&lt;/form&gt;</code></pre>
 </div>
 
 
@@ -310,17 +311,21 @@
 
 <div class="f-item-group" id="header">
 
-	<div class="f-item-heading-group" data-f-toggle="labels">
-		<h2 class="f-item-heading">Header</h2>
-		<div class="f-item-controls">
-			
-			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-				<svg>
-					<use xlink:href="#f-icon-code" />
-				</svg>
-			</span>
-		</div>
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Header</h2>
 	</div>
+		<div class="f-item-group" id="header.signed-in">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Signed In</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
 <div class="f-item-preview">
 	<header class="header clear" role="banner">
 	<div class="header__content">
@@ -434,6 +439,103 @@
 &lt;/header&gt;</code></pre>
 </div>
 
+		</div>
+		<div class="f-item-group" id="header.signed-out">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Signed Out</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<header class="header clear" role="banner">
+	<div class="header__content">
+		<button class="header__burger icon icon--white">
+			<i class="fas fa-bars"></i> Menu
+			<span class="visually-hidden">Open/Close Navigation on Mobile</span>
+		</button>
+		<!-- nav -->
+		<nav class="nav header__nav" role="navigation">
+			<!-- logo -->
+			<div class="logo">
+				<a href="https://local-expelledskate.co.uk">
+					<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+					<img src="https://local-expelledskate.co.uk/wp-content/themes/expelled_theme/img/logo.svg" alt="Logo" class="logo-img">
+				</a>
+			</div>
+			<!-- /logo -->
+			<ul>
+				<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-27"><a href="https://local-expelledskate.co.uk/">Home</a></li>
+				<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="https://local-expelledskate.co.uk/favourite-spots/">Favourite Spots</a></li>
+				<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="https://local-expelledskate.co.uk/latest-spots/">Latest Spots</a></li>
+				<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="https://local-expelledskate.co.uk/skatespots/">Skatespots</a></li>
+			</ul>
+		</nav>
+		<!-- /nav -->
+		<form class="header__search">
+			<label for="site-search"><i class="far fa-search"></i></label>
+			<input type="text" id="site-search" name="site-search" placeholder="Search" autocomplete="off">
+			<ul class="header__results" id="site-search-results"></ul>
+		</form>
+		<!-- profile -->
+		<div class="header__login">
+			<ul>
+				<li><a href="/login"><i class="fas fa-sign-in"></i> Login</a></li>
+				<li><a href="/register"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+			</ul>
+		</div>
+		<!-- /profile -->
+	</div>
+</header>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;header class&#x3D;&quot;header clear&quot; role&#x3D;&quot;banner&quot;&gt;
+	&lt;div class&#x3D;&quot;header__content&quot;&gt;
+		&lt;button class&#x3D;&quot;header__burger icon icon--white&quot;&gt;
+			&lt;i class&#x3D;&quot;fas fa-bars&quot;&gt;&lt;/i&gt; Menu
+			&lt;span class&#x3D;&quot;visually-hidden&quot;&gt;Open/Close Navigation on Mobile&lt;/span&gt;
+		&lt;/button&gt;
+		&lt;!-- nav --&gt;
+		&lt;nav class&#x3D;&quot;nav header__nav&quot; role&#x3D;&quot;navigation&quot;&gt;
+			&lt;!-- logo --&gt;
+			&lt;div class&#x3D;&quot;logo&quot;&gt;
+				&lt;a href&#x3D;&quot;https://local-expelledskate.co.uk&quot;&gt;
+					&lt;!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script --&gt;
+					&lt;img src&#x3D;&quot;https://local-expelledskate.co.uk/wp-content/themes/expelled_theme/img/logo.svg&quot; alt&#x3D;&quot;Logo&quot; class&#x3D;&quot;logo-img&quot;&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;!-- /logo --&gt;
+			&lt;ul&gt;
+				&lt;li id&#x3D;&quot;menu-item-27&quot; class&#x3D;&quot;menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-27&quot;&gt;&lt;a href&#x3D;&quot;https://local-expelledskate.co.uk/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+				&lt;li id&#x3D;&quot;menu-item-30&quot; class&#x3D;&quot;menu-item menu-item-type-post_type menu-item-object-page menu-item-30&quot;&gt;&lt;a href&#x3D;&quot;https://local-expelledskate.co.uk/favourite-spots/&quot;&gt;Favourite Spots&lt;/a&gt;&lt;/li&gt;
+				&lt;li id&#x3D;&quot;menu-item-62&quot; class&#x3D;&quot;menu-item menu-item-type-post_type menu-item-object-page menu-item-62&quot;&gt;&lt;a href&#x3D;&quot;https://local-expelledskate.co.uk/latest-spots/&quot;&gt;Latest Spots&lt;/a&gt;&lt;/li&gt;
+				&lt;li id&#x3D;&quot;menu-item-63&quot; class&#x3D;&quot;menu-item menu-item-type-post_type menu-item-object-page menu-item-63&quot;&gt;&lt;a href&#x3D;&quot;https://local-expelledskate.co.uk/skatespots/&quot;&gt;Skatespots&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/nav&gt;
+		&lt;!-- /nav --&gt;
+		&lt;form class&#x3D;&quot;header__search&quot;&gt;
+			&lt;label for&#x3D;&quot;site-search&quot;&gt;&lt;i class&#x3D;&quot;far fa-search&quot;&gt;&lt;/i&gt;&lt;/label&gt;
+			&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;site-search&quot; name&#x3D;&quot;site-search&quot; placeholder&#x3D;&quot;Search&quot; autocomplete&#x3D;&quot;off&quot;&gt;
+			&lt;ul class&#x3D;&quot;header__results&quot; id&#x3D;&quot;site-search-results&quot;&gt;&lt;/ul&gt;
+		&lt;/form&gt;
+		&lt;!-- profile --&gt;
+		&lt;div class&#x3D;&quot;header__login&quot;&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;/login&quot;&gt;&lt;i class&#x3D;&quot;fas fa-sign-in&quot;&gt;&lt;/i&gt; Login&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;/register&quot;&gt;&lt;i class&#x3D;&quot;fas fa-user-plus&quot;&gt;&lt;/i&gt; Sign Up&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+		&lt;!-- /profile --&gt;
+	&lt;/div&gt;
+&lt;/header&gt;</code></pre>
+</div>
+
+		</div>
 
 </div>
 
@@ -615,6 +717,62 @@
 </div>
 
 		</div>
+
+</div>
+
+
+<div class="f-item-group" id="signup">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Signup</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div style="max-width: 400px;">
+	<form id="wp_signup_form" action="/register/" method="post">
+		<label for="username">Username</label>
+		<input type="text" name="username" id="username">
+		<label for="email">Email address</label>
+		<input type="text" name="email" id="email">
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password">
+		<label for="password_confirmation">Confirm Password</label>
+		<input type="password" name="password_confirmation" id="password_confirmation">
+
+		<input name="terms" id="terms" type="checkbox" value="Yes">
+		<label for="terms">I agree to the Terms of Service</label>
+
+		<input type="submit" id="submitbtn" name="submit" value="Sign Up">
+	</form>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div style&#x3D;&quot;max-width: 400px;&quot;&gt;
+	&lt;form id&#x3D;&quot;wp_signup_form&quot; action&#x3D;&quot;/register/&quot; method&#x3D;&quot;post&quot;&gt;
+		&lt;label for&#x3D;&quot;username&quot;&gt;Username&lt;/label&gt;
+		&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;username&quot; id&#x3D;&quot;username&quot;&gt;
+		&lt;label for&#x3D;&quot;email&quot;&gt;Email address&lt;/label&gt;
+		&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;email&quot; id&#x3D;&quot;email&quot;&gt;
+		&lt;label for&#x3D;&quot;password&quot;&gt;Password&lt;/label&gt;
+		&lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot; id&#x3D;&quot;password&quot;&gt;
+		&lt;label for&#x3D;&quot;password_confirmation&quot;&gt;Confirm Password&lt;/label&gt;
+		&lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;password_confirmation&quot; id&#x3D;&quot;password_confirmation&quot;&gt;
+
+		&lt;input name&#x3D;&quot;terms&quot; id&#x3D;&quot;terms&quot; type&#x3D;&quot;checkbox&quot; value&#x3D;&quot;Yes&quot;&gt;
+		&lt;label for&#x3D;&quot;terms&quot;&gt;I agree to the Terms of Service&lt;/label&gt;
+
+		&lt;input type&#x3D;&quot;submit&quot; id&#x3D;&quot;submitbtn&quot; name&#x3D;&quot;submit&quot; value&#x3D;&quot;Sign Up&quot;&gt;
+	&lt;/form&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
 
 </div>
 
