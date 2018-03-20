@@ -11,6 +11,7 @@
 
 .map__container {
 	position: relative;
+	overflow: hidden;
 }
 
 .map__location {
@@ -18,7 +19,8 @@
 	max-width: 340px;
 	padding: $spacing-default;
 	position: absolute;
-	right: 340px;
+	right: -340px;
+	top: 0;
 	z-index: $z-index-default;
 
 	background-color: $color-secondary;
