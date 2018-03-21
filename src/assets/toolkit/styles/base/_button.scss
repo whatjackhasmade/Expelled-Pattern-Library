@@ -24,8 +24,6 @@ button,
 	font-weight: $font-weight-bold;
 
 	&:hover {
-		color: $color-white;
-
 		&:before {
 			opacity: 0.3;
 		}
@@ -74,6 +72,10 @@ button[disabled],
 			border: 1px solid white;
 			border-radius: $spacing-tiny;
 		}
+	}
+
+	&:hover {
+		color: $color-white;
 	}
 }
 
