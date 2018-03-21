@@ -1,0 +1,41 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $BREADCRUMB
+ * -----------------------------------------------------------------------------
+ */
+
+.breadcrumb {
+    border-radius: $border-radius;
+	padding: $spacing-small $spacing-default;
+
+    background-color: $color-grey-matte;
+    color: $color-white;
+    font-family: $font-family-heading;
+    font-weight: $font-weight-default;
+	list-style: none;
+    text-transform: uppercase;
+
+    a {
+        color: $color-white;
+
+        @include active-states {
+            color: $color-green;
+        }
+    }
+}
+
+    .breadcrumb__item {
+        display: inline-block;
+
+        & + .breadcrumb__item {
+            &:before {
+                content: "/ ";
+
+                color: $color-white;
+            }
+        }
+
+        &.active {
+            color: $color-green;
+        }
+    }
