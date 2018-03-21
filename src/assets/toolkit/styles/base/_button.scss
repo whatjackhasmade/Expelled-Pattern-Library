@@ -16,11 +16,7 @@ button,
 	padding: $spacing-small $spacing-default;
 	position: relative;
 
-	background: $color-tertiary;
-	background: -moz-linear-gradient(top, $color-tertiary 0%, $color-quaternary 100%);
-	background: -webkit-linear-gradient(top, $color-tertiary 0%, $color-quaternary 100%);
-	background: linear-gradient(to bottom, $color-tertiary 0%, $color-quaternary 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6933', endColorstr='#e94d35',GradientType=0 );
+	background-color: $color-green;
 	border: none;
 	border-radius: $spacing-tiny;
 	color: $color-white;
@@ -28,6 +24,8 @@ button,
 	font-weight: $font-weight-bold;
 
 	&:hover {
+		color: $color-white;
+
 		&:before {
 			opacity: 0.3;
 		}
@@ -49,11 +47,7 @@ button,
 
 button[disabled],
 .button--disabled {
-	background: #c7c7c7;
-	background: -moz-linear-gradient(top, #c7c7c7 0%, #c1c1c1 100%);
-	background: -webkit-linear-gradient(top, #c7c7c7 0%,#c1c1c1 100%);
-	background: linear-gradient(to bottom, #c7c7c7 0%,#c1c1c1 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7c7c7', endColorstr='#c1c1c1',GradientType=0 );
+	background-color: $color-grey-lightest;
     cursor: not-allowed;
 
 	&:hover {
@@ -66,6 +60,8 @@ button[disabled],
 .button--primary {
 	&:focus {
 		outline: none;
+
+		color: $color-white;
 
 		&:after {
 			content: "";
@@ -83,8 +79,8 @@ button[disabled],
 
 .button--secondary {
 	background: $color-white;
-	border: 1px solid $color-tertiary;
-	color: $color-tertiary;
+	border: 1px solid $color-green;
+	color: $color-green;
 
 	&:focus {
 		outline: none;
@@ -97,7 +93,7 @@ button[disabled],
 			top: $spacing-tiny/2.4;
     		width: calc(100% - 0.275rem);
 
-			border: 1px solid $color-tertiary;
+			border: 1px solid $color-green;
 			border-radius: $spacing-tiny;
 		}
 	}

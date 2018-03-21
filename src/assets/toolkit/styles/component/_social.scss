@@ -32,11 +32,7 @@
 		margin-left: $spacing-small;
 		width: $spacing-large;
 
-		background: $color-tertiary;
-		background: -moz-linear-gradient(top, $color-tertiary 0%, $color-quaternary 100%);
-		background: -webkit-linear-gradient(top, $color-tertiary 0%, $color-quaternary 100%);
-		background: linear-gradient(to bottom, $color-tertiary 0%, $color-quaternary 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6933', endColorstr='#e94d35',GradientType=0 );
+		background-color: $color-green;
 		border: none;
 		border-radius: $spacing-tiny;
 		color: $color-white;

@@ -41,7 +41,7 @@ select {
 }
 
 input[readonly] {
-	background: #F1F1F1;
+	background-color: $color-grey-lightest;
     cursor: not-allowed;
 }
 
@@ -52,7 +52,49 @@ textarea {
 	resize: vertical;
 }
 
-input[type="checkbox"],
+input[type="checkbox"] {
+	display: none;
+
+	@include active-states() {
+		& + label {
+			&:before {
+				background-color: rgba($color-green, 0.2);
+			}
+		}
+	}
+
+	& + label {
+		margin-top: 0;
+		padding-left: $spacing-default + $spacing-tiny;
+		position: relative;
+
+		border: 2px solid transparent;
+		cursor: pointer;
+		transition: 0.1s all ease;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			height: $spacing-default;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: $spacing-default;
+
+			border: 1px solid $color-green;
+			transition: background-color 0.2s ease;
+		}
+	}
+
+	&:checked {
+		& + label {
+			&:before {
+				background-color: $color-green;
+			}
+		}
+	}
+}
+
 input[type="radio"] {
 	display: none;
 
@@ -69,8 +111,8 @@ input[type="radio"] {
 
 	&:checked {
 		& + label {
-			background-color: $color-quaternary;
-			border-color: $color-quaternary;
+			background-color: $color-green;
+			border-color: $color-green;
 			color: $color-white;
 			font-weight: $font-weight-bold;
 		}
