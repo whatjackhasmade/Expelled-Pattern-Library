@@ -8,6 +8,7 @@
 [type="reset"],
 [type="submit"],
 button,
+.button,
 .button--primary {
 	align-items: center;
 	display: inline-flex;
@@ -98,6 +99,10 @@ button[disabled],
 			border: 1px solid $color-green;
 			border-radius: $spacing-tiny;
 		}
+	}
+
+	&:hover {
+		color: $color-green;
 	}
 }
 
