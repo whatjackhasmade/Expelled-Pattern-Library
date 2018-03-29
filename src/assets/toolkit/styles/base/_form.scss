@@ -4,6 +4,12 @@
  * -----------------------------------------------------------------------------
  */
 
+fieldset {
+	padding: $spacing-default;
+	border-color: $color-grey-lightest;
+    border-style: solid;
+}
+
 form {
 	margin-top: $spacing-large;
 
@@ -58,7 +64,7 @@ input[type="checkbox"] {
 	@include active-states() {
 		& + label {
 			&:before {
-				background-color: rgba($color-green, 0.2);
+				background-color: rgba($color-purple, 0.2);
 			}
 		}
 	}
@@ -81,7 +87,7 @@ input[type="checkbox"] {
 			top: 0;
 			width: $spacing-default;
 
-			border: 1px solid $color-green;
+			border: 1px solid $color-purple;
 			transition: background-color 0.2s ease;
 		}
 	}
@@ -89,7 +95,14 @@ input[type="checkbox"] {
 	&:checked {
 		& + label {
 			&:before {
-				background-color: $color-green;
+				align-items: center;
+				content: "\f00c";
+				display: flex;
+				justify-content: center;
+
+				background-color: $color-purple;
+				color: $color-white;
+				font-family: FontAwesome;
 			}
 		}
 	}
@@ -111,8 +124,8 @@ input[type="radio"] {
 
 	&:checked {
 		& + label {
-			background-color: $color-green;
-			border-color: $color-green;
+			background-color: $color-purple;
+			border-color: $color-purple;
 			color: $color-white;
 			font-weight: $font-weight-bold;
 		}

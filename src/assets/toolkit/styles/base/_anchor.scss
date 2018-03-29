@@ -6,13 +6,13 @@
 
 a,
 .link {
-	color: $color-blue;
+	color: $color-purple;
 	text-decoration: none;
 
 	transition: 0.2s color ease;
 
 	@include active-states() {
-		color: lighten($color-blue, 20%);
+		color: lighten($color-purple, 20%);
 	}
 }
 

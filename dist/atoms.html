@@ -11,9 +11,10 @@
 	<link rel="stylesheet" href="./assets/fabricator/styles/f.css">
 
 	<!-- toolkit styles -->
-	<link rel="stylesheet" href="./assets/toolkit/styles/fontawesome-all.min.css">
 	<link rel="stylesheet" href="./assets/toolkit/styles/styles.css">
 	<!-- /toolkit styles -->
+
+	<script defer src="https://pro.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-DtPgXIYsUR6lLmJK14ZNUi11aAoezQtw4ut26Zwy9/6QXHH8W3+gjrRDT+lHiiW4" crossorigin="anonymous"></script>
 
 </head>
 
@@ -66,75 +67,100 @@
 		</li>
 
 		<li>
-			<a href="components.html" class="f-menu__heading">Components</a>
+			<a href="atoms.html" class="f-menu__heading">Atoms</a>
 			<ul>
 				<li>
-					<a href="components.html#buttons">Buttons</a>
+					<a href="atoms.html#buttons">Buttons</a>
 				</li>
 				<li>
-					<a href="components.html#card">Card</a>
+					<a href="atoms.html#colours">Colours</a>
 				</li>
 				<li>
-					<a href="components.html#input">Input</a>
+					<a href="atoms.html#heading">Heading</a>
 				</li>
 				<li>
-					<a href="components.html#lists">Lists</a>
+					<a href="atoms.html#input">Input</a>
 				</li>
 				<li>
-					<a href="components.html#message">Message</a>
+					<a href="atoms.html#label">Label</a>
 				</li>
 				<li>
-					<a href="components.html#paragraph">Paragraph</a>
+					<a href="atoms.html#link">Link</a>
 				</li>
 				<li>
-					<a href="components.html#select">Select</a>
+					<a href="atoms.html#lists">Lists</a>
 				</li>
 				<li>
-					<a href="components.html#table">Table</a>
+					<a href="atoms.html#message">Message</a>
 				</li>
 				<li>
-					<a href="components.html#textarea">Textarea</a>
+					<a href="atoms.html#paragraph">Paragraph</a>
 				</li>
 				<li>
-					<a href="components.html#vote">Vote</a>
+					<a href="atoms.html#select">Select</a>
+				</li>
+				<li>
+					<a href="atoms.html#table">Table</a>
+				</li>
+				<li>
+					<a href="atoms.html#textarea">Textarea</a>
+				</li>
+				<li>
+					<a href="atoms.html#vote">Vote</a>
 				</li>
 			</ul>
 		</li>
 		<li>
-			<a href="structures.html" class="f-menu__heading">Structures</a>
+			<a href="molecules.html" class="f-menu__heading">Molecules</a>
 			<ul>
 				<li>
-					<a href="structures.html#breadcrumb">Breadcrumb</a>
+					<a href="molecules.html#breadcrumb">Breadcrumb</a>
 				</li>
 				<li>
-					<a href="structures.html#card-cycle">Card Cycle</a>
+					<a href="molecules.html#card">Card</a>
 				</li>
 				<li>
-					<a href="structures.html#favourites">Favourites</a>
+					<a href="molecules.html#card-cycle">Card Cycle</a>
 				</li>
 				<li>
-					<a href="structures.html#footer">Footer</a>
+					<a href="molecules.html#favourites">Favourites</a>
 				</li>
 				<li>
-					<a href="structures.html#form">Form</a>
+					<a href="molecules.html#form">Form</a>
 				</li>
 				<li>
-					<a href="structures.html#header">Header</a>
+					<a href="molecules.html#jumbotron">Jumbotron</a>
 				</li>
 				<li>
-					<a href="structures.html#jumbotron">Jumbotron</a>
+					<a href="molecules.html#map">Map</a>
 				</li>
 				<li>
-					<a href="structures.html#login">Login</a>
+					<a href="molecules.html#slider">Slider</a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="organisms.html" class="f-menu__heading">Organisms</a>
+			<ul>
+				<li>
+					<a href="organisms.html#footer">Footer</a>
 				</li>
 				<li>
-					<a href="structures.html#map">Map</a>
+					<a href="organisms.html#header">Header</a>
 				</li>
 				<li>
-					<a href="structures.html#signup">Signup</a>
+					<a href="organisms.html#login">Login</a>
 				</li>
 				<li>
-					<a href="structures.html#slider">Slider</a>
+					<a href="organisms.html#signup">Signup</a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="templates.html" class="f-menu__heading">Templates</a>
+			<ul>
+				<li>
+					<a href="templates.html#post">Post</a>
 				</li>
 			</ul>
 		</li>
@@ -144,6 +170,9 @@
 			<ul>
 				<li>
 					<a href="pages/home.html">Home</a>
+				</li>
+				<li>
+					<a href="pages/post.html">Post</a>
 				</li>
 			</ul>
 		</li>
@@ -172,7 +201,7 @@
 	</div>
 </div>
   
-<h1 data-f-toggle="labels">Components</h1>
+<h1 data-f-toggle="labels">Atoms</h1>
 
 
 <div class="f-item-group" id="buttons">
@@ -180,6 +209,33 @@
 	<div class="f-item-heading-group">
 		<h2 class="f-item-heading" data-f-toggle="labels">Buttons</h2>
 	</div>
+		<div class="f-item-group" id="buttons.circle">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Circle</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>These are notes associated with this <code>button</code> component.</p>
+
+</div>
+<div class="f-item-preview">
+	<button class="button button--circle button--primary"><i class="fas fa-info"></i></button>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;button class&#x3D;&quot;button button--circle button--primary&quot;&gt;&lt;i class&#x3D;&quot;fas fa-info&quot;&gt;&lt;/i&gt;&lt;/button&gt;</code></pre>
+</div>
+
+		</div>
 		<div class="f-item-group" id="buttons.disabled">
 			<div class="f-item-heading-group" data-f-toggle="labels">
 				<h3 class="f-item-heading">Disabled</h3>
@@ -227,10 +283,64 @@
 
 </div>
 <div class="f-item-preview">
+	<button class="simplefavorite-button" data-postid="10" data-siteid="1" data-groupid="1" data-favoritecount="1" style=""><i class="fas fa-fire fa-2x"></i></button>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;button class&#x3D;&quot;simplefavorite-button&quot; data-postid&#x3D;&quot;10&quot; data-siteid&#x3D;&quot;1&quot; data-groupid&#x3D;&quot;1&quot; data-favoritecount&#x3D;&quot;1&quot; style&#x3D;&quot;&quot;&gt;&lt;i class&#x3D;&quot;fas fa-fire fa-2x&quot;&gt;&lt;/i&gt;&lt;/button&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="buttons.favourited">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Favourited</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>These are notes associated with this <code>button</code> component.</p>
+
+</div>
+<div class="f-item-preview">
 	<button class="simplefavorite-button active" data-postid="10" data-siteid="1" data-groupid="1" data-favoritecount="1" style=""><i class="fas fa-fire fa-2x"></i></button>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;button class&#x3D;&quot;simplefavorite-button active&quot; data-postid&#x3D;&quot;10&quot; data-siteid&#x3D;&quot;1&quot; data-groupid&#x3D;&quot;1&quot; data-favoritecount&#x3D;&quot;1&quot; style&#x3D;&quot;&quot;&gt;&lt;i class&#x3D;&quot;fas fa-fire fa-2x&quot;&gt;&lt;/i&gt;&lt;/button&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="buttons.primary-with-icon">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Primary With Icon</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>These are notes associated with this <code>button</code> component.</p>
+
+</div>
+<div class="f-item-preview">
+	<button class="button button--primary">Submit <i class="fas fa-plus"></i></button>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;button class&#x3D;&quot;button button--primary&quot;&gt;Submit &lt;i class&#x3D;&quot;fas fa-plus&quot;&gt;&lt;/i&gt;&lt;/button&gt;</code></pre>
 </div>
 
 		</div>
@@ -292,10 +402,10 @@
 </div>
 
 
-<div class="f-item-group" id="card">
+<div class="f-item-group" id="colours">
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
-		<h2 class="f-item-heading">Card</h2>
+		<h2 class="f-item-heading">Colours</h2>
 		<div class="f-item-controls">
 			
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
@@ -306,28 +416,122 @@
 		</div>
 	</div>
 <div class="f-item-preview">
-	<div class="card">
-	<div class="card__image" style="background-image: url('http://139.59.188.10/wp-content/uploads/2018/02/IMG_7931.jpg')">
+	<div class="f-color-chips">
+	<div class="f-color-chip">
+		<div class="f-color-chip__name">Black</div>
+		<div class="f-color-chip__color">hsl(0, 0%, 7%)</div>
 	</div>
-	<div class="card__content">
-		<h3>o2 Guildhall</h3>
-		<p>Make perfectly hot homemade coffee. Carefully pour into coffee cup. <i class="em em-coffee"></i></p>
-		<a class="button button--primary">View Skatespot</a>
-		<a class="button button--secondary">Next Skatespot</a>
+	<div class="f-color-chip">
+		<div class="f-color-chip__name">Grey Matte</div>
+		<div class="f-color-chip__color">hsl(206, 14%, 20%)</div>
+	</div>
+	<div class="f-color-chip">
+		<div class="f-color-chip__name">Grey</div>
+		<div class="f-color-chip__color">hsl(0, 0%, 35%)</div>
+	</div>
+	<div class="f-color-chip">
+		<div class="f-color-chip__name">Grey Light</div>
+		<div class="f-color-chip__color">hsl(0, 0%, 93%)</div>
+	</div>
+	<div class="f-color-chip">
+		<div class="f-color-chip__name">White</div>
+		<div class="f-color-chip__color">hsl(0, 0%, 100%)</div>
+	</div>
+</div>
+<div class="f-color-chips">
+	<div class="f-color-chip">
+		<div class="f-color-chip__name">Primary</div>
+		<div class="f-color-chip__color">hsl(214, 75%, 11%)</div>
+	</div>
+	<div class="f-color-chip">
+		<div class="f-color-chip__name">Secondary</div>
+		<div class="f-color-chip__color">hsl(206, 68%, 17%)</div>
+	</div>
+	<div class="f-color-chip">
+		<div class="f-color-chip__name">Tertiary</div>
+		<div class="f-color-chip__color">hsl(16, 100%, 60%)</div>
+	</div>
+	<div class="f-color-chip">
+		<div class="f-color-chip__name">Quaternary</div>
+		<div class="f-color-chip__color">hsl(8, 80%, 56%)</div>
 	</div>
 </div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class&#x3D;&quot;card&quot;&gt;
-	&lt;div class&#x3D;&quot;card__image&quot; style&#x3D;&quot;background-image: url(&#x27;http://139.59.188.10/wp-content/uploads/2018/02/IMG_7931.jpg&#x27;)&quot;&gt;
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+	&lt;div class&#x3D;&quot;f-color-chip&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Black&lt;/div&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__color&quot;&gt;hsl(0, 0%, 7%)&lt;/div&gt;
 	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;card__content&quot;&gt;
-		&lt;h3&gt;o2 Guildhall&lt;/h3&gt;
-		&lt;p&gt;Make perfectly hot homemade coffee. Carefully pour into coffee cup. &lt;i class&#x3D;&quot;em em-coffee&quot;&gt;&lt;/i&gt;&lt;/p&gt;
-		&lt;a class&#x3D;&quot;button button--primary&quot;&gt;View Skatespot&lt;/a&gt;
-		&lt;a class&#x3D;&quot;button button--secondary&quot;&gt;Next Skatespot&lt;/a&gt;
+	&lt;div class&#x3D;&quot;f-color-chip&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Grey Matte&lt;/div&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__color&quot;&gt;hsl(206, 14%, 20%)&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Grey&lt;/div&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__color&quot;&gt;hsl(0, 0%, 35%)&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Grey Light&lt;/div&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__color&quot;&gt;hsl(0, 0%, 93%)&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;White&lt;/div&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__color&quot;&gt;hsl(0, 0%, 100%)&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+	&lt;div class&#x3D;&quot;f-color-chip&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Primary&lt;/div&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__color&quot;&gt;hsl(214, 75%, 11%)&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Secondary&lt;/div&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__color&quot;&gt;hsl(206, 68%, 17%)&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Tertiary&lt;/div&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__color&quot;&gt;hsl(16, 100%, 60%)&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Quaternary&lt;/div&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__color&quot;&gt;hsl(8, 80%, 56%)&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="heading">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Heading</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<h1>Heading Level 1</h1>
+<h2>Heading Level 2</h2>
+<h3>Heading Level 3</h3>
+<h4>Heading Level 4</h4>
+<h5>Heading Level 5</h5>
+<h6>Heading Level 6</h6>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;h1&gt;Heading Level 1&lt;/h1&gt;
+&lt;h2&gt;Heading Level 2&lt;/h2&gt;
+&lt;h3&gt;Heading Level 3&lt;/h3&gt;
+&lt;h4&gt;Heading Level 4&lt;/h4&gt;
+&lt;h5&gt;Heading Level 5&lt;/h5&gt;
+&lt;h6&gt;Heading Level 6&lt;/h6&gt;</code></pre>
 </div>
 
 
@@ -425,6 +629,28 @@
 </div>
 
 		</div>
+		<div class="f-item-group" id="input.password">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Password</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<label for="passwordInput">Password input</label>
+<input type="password" id="passwordInput" />
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;label for&#x3D;&quot;passwordInput&quot;&gt;Password input&lt;/label&gt;
+&lt;input type&#x3D;&quot;password&quot; id&#x3D;&quot;passwordInput&quot; /&gt;</code></pre>
+</div>
+
+		</div>
 		<div class="f-item-group" id="input.radio">
 			<div class="f-item-heading-group" data-f-toggle="labels">
 				<h3 class="f-item-heading">Radio</h3>
@@ -515,11 +741,101 @@
 </div>
 
 
+<div class="f-item-group" id="label">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Label</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>These are notes associated with this <code>button</code> component.</p>
+
+</div>
+<div class="f-item-preview">
+	<label for="">I'm a pretty label, aren't I?</labal>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;label for&#x3D;&quot;&quot;&gt;I&#x27;m a pretty label, aren&#x27;t I?&lt;/labal&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="link">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Link</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>These are notes associated with this <code>button</code> component.</p>
+
+</div>
+<div class="f-item-preview">
+	<a href="#">Click me and I'll take you to where the magic is</a>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;a href&#x3D;&quot;#&quot;&gt;Click me and I&#x27;ll take you to where the magic is&lt;/a&gt;</code></pre>
+</div>
+
+
+</div>
+
+
 <div class="f-item-group" id="lists">
 
 	<div class="f-item-heading-group">
 		<h2 class="f-item-heading" data-f-toggle="labels">Lists</h2>
 	</div>
+		<div class="f-item-group" id="lists.horizontal">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Horizontal</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<ul class="list list--horizontal">
+	<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+	<li>Aliquam tincidunt mauris eu risus.</li>
+	<li>Vestibulum auctor dapibus neque.</li>
+</ul>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;ul class&#x3D;&quot;list list--horizontal&quot;&gt;
+	&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
+	&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
+	&lt;li&gt;Vestibulum auctor dapibus neque.&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+		</div>
 		<div class="f-item-group" id="lists.ordered">
 			<div class="f-item-heading-group" data-f-toggle="labels">
 				<h3 class="f-item-heading">Ordered</h3>
@@ -698,14 +1014,21 @@
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Select</h2>
 		<div class="f-item-controls">
-			
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
 					<use xlink:href="#f-icon-code" />
 				</svg>
 			</span>
 		</div>
-	</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>These are notes associated with this <code>button</code> component.</p>
+
+</div>
 <div class="f-item-preview">
 	<select name="" id="">
 	<option value="">Option 1</option>

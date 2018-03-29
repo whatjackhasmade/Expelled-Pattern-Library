@@ -22,6 +22,17 @@ header {
 		}
 	}
 
+	button {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		margin-top: 0;
+
+		svg {
+			margin-right: $spacing-tiny;
+		}
+	}
+
 	li {
 		display: inline-block;
 
@@ -35,13 +46,13 @@ header {
 		margin: 0;
 		padding: 0;
 
-		@include bp-min-width($bp-desktop) {
+		@include bp-min-width($bp-desktop-medium) {
 			margin-left: $spacing-default;
 		}
 	}
 
 	.header__burger {
-		@include bp-min-width($bp-desktop) {
+		@include bp-min-width($bp-desktop-medium) {
 			display: none;
 		}
 	}
@@ -60,16 +71,25 @@ header {
 		background-color: lighten($color-primary, 5%);
 		transition: 0.15s left ease;
 
-		@include bp-min-width($bp-desktop) {
+		@include bp-min-width($bp-desktop-medium) {
+			font-size: 0.85rem;
+		}
+
+		@include bp-min-width($bp-desktop-medium) {
 			align-items: center;
 			flex-direction: row;
 			height: auto;
 			padding: 0;
 			position: relative;
 			left: 0;
-			min-width: 700px;
+			min-width: 500px;
 
 			background-color: transparent;
+			font-size: 1rem;
+		}
+
+		@include bp-min-width($bp-desktop-medium) {
+			min-width: 620px;
 		}
 
 		li {
@@ -77,7 +97,7 @@ header {
 			margin-left: 0;
 			width: 100%;
 
-			@include bp-min-width($bp-desktop) {
+			@include bp-min-width($bp-desktop-medium) {
 				display: inline-block;
 				width: auto;
 			}
@@ -102,6 +122,13 @@ header {
 	img {
 		background-color: $color-white;
 		border-radius: 50%;
+	}
+}
+
+.header__avatar,
+.header__login {
+	@include bp-max-width($bp-desktop) {
+		margin-left: auto;
 	}
 }
 
@@ -170,10 +197,9 @@ header {
 .header__search {
 	align-items: center;
 	border-radius: $border-radius;
-	display: flex;
+	display: none;
 	justify-content: flex-start;
-	margin-left: auto;
-	margin-top: $spacing-small;
+	margin: 0 $spacing-small 0 auto;
 	max-width: 300px;
 	position: relative;
 	width: 100%;
@@ -200,7 +226,11 @@ header {
 	}
 
 	@include bp-min-width($bp-desktop) {
-		margin-top: 0;
+		display: flex;
+	}
+
+	@include bp-min-width($bp-desktop-medium) {
+		justify-content: center;
 		padding: $spacing-tiny;
 	}
 }
@@ -216,6 +246,11 @@ header {
 
 	@include bp-min-width($bp-desktop) {
 		margin-bottom: 0;
+		max-width: 115px;
+	}
+
+	@include bp-min-width($bp-desktop-medium) {
+		max-width: 185px;
 	}
 }
 

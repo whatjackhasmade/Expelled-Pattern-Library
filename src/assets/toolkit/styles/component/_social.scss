@@ -23,6 +23,8 @@
 	font-size: 0;
 	position: relative;
 
+	cursor: pointer;
+
 	&:before {
 		align-items: center;
 		border-radius: $border-radius;
@@ -32,12 +34,12 @@
 		margin-left: $spacing-small;
 		width: $spacing-large;
 
-		background-color: $color-green;
+		background-color: $color-purple;
 		border: none;
 		border-radius: $spacing-tiny;
 		color: $color-white;
 		cursor: pointer;
-		font-family: "Font Awesome\ 5 Brands", "Arial", sans-serif;
+		font-family: FontAwesome;
 		font-size: 1rem;
 		font-weight: $font-weight-bold;
 	}
@@ -64,7 +66,7 @@
 
 .wp-social-login-provider-facebook {
 	&:before {
-		content: "\f39e";
+		content: "\f09a";
 	}
 }
 

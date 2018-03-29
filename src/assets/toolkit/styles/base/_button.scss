@@ -17,7 +17,7 @@ button,
 	padding: $spacing-small $spacing-default;
 	position: relative;
 
-	background-color: $color-green;
+	background-color: $color-purple;
 	border: none;
 	border-radius: $spacing-tiny;
 	color: $color-white;
@@ -42,6 +42,11 @@ button,
 		opacity: 0;
 		transition: 0.2s opacity ease;
 	}
+
+	& + i,
+	& + svg {
+		margin-left: $spacing-small;
+	}
 }
 
 button[disabled],
@@ -53,6 +58,17 @@ button[disabled],
 		&:before {
 			opacity: 0;
 		}
+	}
+}
+
+.button--circle {
+	border-radius: 50%;
+	height: $spacing-large;
+	width: $spacing-large;
+
+	i,
+	svg {
+		margin-left: 0;
 	}
 }
 
@@ -82,8 +98,8 @@ button[disabled],
 
 .button--secondary {
 	background: $color-white;
-	border: 1px solid $color-green;
-	color: $color-green;
+	border: 1px solid $color-purple;
+	color: $color-purple;
 
 	&:focus {
 		outline: none;
@@ -96,13 +112,13 @@ button[disabled],
 			top: $spacing-tiny/2.4;
     		width: calc(100% - 0.275rem);
 
-			border: 1px solid $color-green;
+			border: 1px solid $color-purple;
 			border-radius: $spacing-tiny;
 		}
 	}
 
 	&:hover {
-		color: $color-green;
+		color: $color-purple;
 	}
 }
 
@@ -121,7 +137,7 @@ button[disabled],
 		opacity: 0.6;
 	}
 
-	&.active i {
+	&.active {
 		background: -webkit-gradient(
 			linear,
 			left top,
@@ -132,5 +148,10 @@ button[disabled],
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		color: rgba(211, 21, 87, 1);
+	}
+
+	i,
+	svg {
+		margin-left: 0;
 	}
 }

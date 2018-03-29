@@ -61,7 +61,7 @@ tr {
         a {
             display: inline-block;
 
-            color: $color-blue;
+            color: $color-purple;
             padding: 0 $spacing-tiny;
             margin: 0 $spacing-tiny;
             text-decoration: none;
@@ -78,12 +78,12 @@ tr {
                     top: 25%;
                     width: 1px;
 
-                    background-color: rgba($color-blue, 0.4);
+                    background-color: rgba($color-purple, 0.4);
                 }
             }
 
             @include active-states() {
-                color: darken($color-blue, 20%);
+                color: darken($color-purple, 20%);
             }
         }
 

@@ -1,0 +1,39 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $ARTICLE
+ * -----------------------------------------------------------------------------
+ */
+
+article {
+    padding: $spacing-small;
+
+    /* Advanced vertical rhythym based off of https://medium.com/@sebastian.eberlein/advanced-vertical-margins-4ac69f032f79 */
+    > * + * { margin-top: 1.5rem }
+    > h2 + * { margin-top: 1rem }
+    > img + *, > figure + * { margin-top: 3rem }
+    > * + h2 { margin-top: 4.5rem }
+    > * + h3 { margin-top: 3.5rem }
+    > * + img { margin-top: 3rem }
+    > img + img, > figure + figure { margin-top: 1rem }
+    > h2 + h3 { margin-top: 2rem }
+
+    & > * {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    & > *:not(img):not(figure):not(.ignore) {
+        max-width: 800px;
+    }
+
+    & > img,
+    & > figure,
+    & .ignore {
+        display: block;
+        width: 1200px;
+    }
+
+    @include bp-min-width($bp-mobile-large) {
+        padding: $spacing-large;
+    }
+}
