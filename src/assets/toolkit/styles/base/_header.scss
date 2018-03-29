@@ -158,10 +158,11 @@ header {
 		display: block;
 		padding: $spacing-tiny $spacing-default;
 
-		transition: 0.2s background-color ease;
+		transition: 0.2s color ease;
 
 		@include active-states() {
-			background-color: $color-grey-light;
+			background: $color-white;
+			color: $color-purple;
 		}
 	}
 }
