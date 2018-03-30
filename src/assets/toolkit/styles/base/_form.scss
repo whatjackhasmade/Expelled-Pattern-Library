@@ -52,10 +52,17 @@ input[readonly] {
 }
 
 textarea {
+	border-radius: $border-radius;
+	display: block;
 	min-height: 200px;
+	padding: $spacing-small $spacing-default;
 	width: 100%;
 
+	background: $color-white;
+	border: 1px solid $color-grey-light;
+	color: $color-grey;
 	resize: vertical;
+	transition: border-color 0.25s, box-shadow 0.25s;
 }
 
 input[type="checkbox"] {
