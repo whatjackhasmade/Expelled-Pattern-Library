@@ -158,11 +158,11 @@ header {
 		display: block;
 		padding: $spacing-tiny $spacing-default;
 
-		transition: 0.2s color ease;
+		transition: 0.2s all ease;
 
 		@include active-states() {
-			background: $color-white;
-			color: $color-purple;
+			color: $color-white;
+			background-color: $color-purple;
 		}
 	}
 }
@@ -182,16 +182,21 @@ header {
 		padding: $spacing-small;
 
 		color: $color-black;
-		transition: 0.2s background-color ease;
+		transition: 0.2s all ease;
 
 		@include active-states() {
-			background-color: $color-grey-light;
+			color: $color-white;
+			background-color: $color-purple;
 		}
 	}
 
 	li {
 		display: block;
-		margin-left: $spacing-tiny;
+		margin-left: 0;
+
+		~ li {
+			margin-left: 0;
+		}
 	}
 }
 
