@@ -19,4 +19,34 @@ footer {
 			color: darken($color-white, 20%);
 		}
 	}
+
+	li ~ li {
+		margin-top: $spacing-tiny;
+	}
+}
+
+.footer__content {
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+
+		color: $color-white;
+		font-family: $font-family-default;
+		font-size: 1rem;
+		font-weight: $font-weight-bold;
+		letter-spacing: 0.2px;
+		text-transform: uppercase;
+	}
+
+	a {
+		color: $color-grey-light;
+		transition: 0.2s color ease;
+
+		@include active-states() {
+			color: $color-white;
+		}
+	}
+
+	~ .footer__content {
+		margin-left: $spacing-large;
+	}
 }
