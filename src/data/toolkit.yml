@@ -1,12 +1,18 @@
 colors:
   primary:
-    Black: "hsl(0, 0%, 7%)"
-    Grey Matte: "hsl(206, 14%, 20%)"
-    Grey: "hsl(0, 0%, 35%)"
-    Grey Light: "hsl(0, 0%, 93%)"
-    White: "hsl(0, 0%, 100%)"
+    Black: "#121212"
+    Grey Matte: "#2C343A"
+    Grey: "#595959"
+    Grey Light: "#EDEDED"
+    White: "#FFFFFF"
   secondary:
-    Primary: "hsl(214, 75%, 11%)"
-    Secondary: "hsl(206, 68%, 17%)"
-    Tertiary: "hsl(16, 100%, 60%)"
-    Quaternary: "hsl(8, 80%, 56%)"
+    Primary: "#071931"
+    Secondary: "#0E2F49"
+    Tertiary: "#FF6933"
+    Quaternary: "#E94D35"
+  tertiary:
+    Blue: "#00CEC9"
+    green: "#55EFC4"
+    Purple: "#5F27CD"
+    Red: "#D63031"
+    Yellow: "#FFA801"
