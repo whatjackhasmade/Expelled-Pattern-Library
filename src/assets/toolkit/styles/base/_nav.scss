@@ -1,0 +1,46 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $NAV
+ * -----------------------------------------------------------------------------
+ */
+
+nav {
+
+}
+
+
+.pagination {
+    display: block;
+
+    a {
+        display: inline-block;
+        padding: $spacing-tiny $spacing-small;
+        position: relative;
+
+        background-color: $color-purple;
+        border: none;
+        border-radius: $border-radius;
+        color: $color-white;
+        cursor: pointer;
+        font-weight: $font-weight-bold;
+
+        &:hover {
+            &:before {
+                opacity: 0.3;
+            }
+        }
+
+        &:before {
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            background-color: $color-white;
+            opacity: 0;
+            transition: 0.2s opacity ease;
+        }
+    }
+}

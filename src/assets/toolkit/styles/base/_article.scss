@@ -75,6 +75,7 @@ article {
 
         a {
             color: $color-black;
+            text-decoration: none;
 
             @include active-states {
                 color: $color-purple;
