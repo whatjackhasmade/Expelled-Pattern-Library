@@ -43,8 +43,8 @@ button,
 		transition: 0.2s opacity ease;
 	}
 
-	& + i,
-	& + svg {
+	i,
+	svg {
 		margin-left: $spacing-small;
 	}
 }
