@@ -4,8 +4,19 @@
  * -----------------------------------------------------------------------------
  */
 
+.watch-position {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+
+    font-family: $font-family-heading;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+
 .watch-action {
     text-align: center;
+
     .status {
         display: none;
     }
@@ -18,9 +29,16 @@
     height: 24px;
     justify-content: center;
     width: 24px;
+
     a {
         display: block;
         color: $color-black;
         cursor: pointer;
+    }
+
+    &:hover {
+        a {
+            color: $color-purple;
+        }
     }
 }
