@@ -22,7 +22,7 @@ article {
         margin-right: auto;
     }
 
-    & > *:not(img):not(figure):not(.ignore) {
+    & > *:not(img):not(figure):not(.ignore):not(.article__thumbnail) {
         max-width: 800px;
     }
 
@@ -31,6 +31,10 @@ article {
     & .ignore {
         display: block;
         width: 1200px;
+    }
+
+    & .article__thumbnail {
+        width: 100%;
     }
 
     @include bp-min-width($bp-mobile-large) {
