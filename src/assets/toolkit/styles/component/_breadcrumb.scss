@@ -5,21 +5,19 @@
  */
 
 .breadcrumb {
-    border-radius: $border-radius;
-	padding: $spacing-small $spacing-default;
+	padding: $spacing-small 0;
 
-    background-color: $color-purple;
-    color: $color-white;
+    color: $color-black;
     font-family: $font-family-heading;
     font-weight: $font-weight-default;
 	list-style: none;
     text-transform: uppercase;
 
     a {
-        color: $color-white;
+        color: $color-black;
 
         @include active-states {
-            color: $color-grey-lightest;
+            color: $color-purple;
         }
     }
 }
@@ -27,15 +25,9 @@
     .breadcrumb__item {
         display: inline-block;
 
-        & + .breadcrumb__item {
-            &:before {
-                content: "/ ";
+        &:after {
+            content: " / ";
 
-                color: $color-white;
-            }
-        }
-
-        &.active {
-            color: $color-white;
+            color: $color-black;
         }
     }

@@ -42,19 +42,42 @@ article {
     }
 
     &.has-post-thumbnail {
-        padding-top: 0;
+        padding: 0;
+        padding-bottom: $spacing-small;
+
+        @include bp-min-width($bp-mobile-large) {
+            padding-bottom: $spacing-large;
+        }
     }
 }
 
-.article__thumbnail {
-    height: 200px;
-    max-width: 100%;
+    .article__thumbnail {
+        height: 200px;
+        max-width: 100%;
 
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
-    @include bp-min-width($bp-mobile-large) {
-        height::300px;
+        @include bp-min-width($bp-mobile-large) {
+            height::300px;
+        }
     }
-}
+
+    .article__meta {
+        padding: $spacing-small 0;
+
+        color: $color-black;
+        font-family: $font-family-heading;
+        font-weight: $font-weight-default;
+        list-style: none;
+        text-transform: uppercase;
+
+        a {
+            color: $color-black;
+
+            @include active-states {
+                color: $color-purple;
+            }
+        }
+    }
