@@ -36,4 +36,21 @@ article {
     @include bp-min-width($bp-mobile-large) {
         padding: $spacing-large;
     }
+
+    &.has-post-thumbnail {
+        padding-top: 0;
+    }
+}
+
+.article__thumbnail {
+    height: 200px;
+    max-width: 100%;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include bp-min-width($bp-mobile-large) {
+        height::300px;
+    }
 }
