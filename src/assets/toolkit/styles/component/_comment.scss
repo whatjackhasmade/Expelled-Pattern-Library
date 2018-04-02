@@ -1,0 +1,88 @@
+/**
+ * -----------------------------------------------------------------------------
+ * $COMMENT
+ * -----------------------------------------------------------------------------
+ */
+
+.comments {
+    ul {
+        margin: 0;
+        padding: 0;
+
+        ul {
+            padding-left: $spacing-default;
+            margin-left: $spacing-default;
+
+            border-left: 1px solid $color-purple;
+        }
+    }
+}
+
+.comment {
+    & > * {
+        max-width: $bp-tablet;
+    }
+
+    list-style: none;
+
+    & ~ .comment {
+        margin-top: $spacing-huge;
+    }
+}
+
+    .comment-author {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+
+        font-family: $font-family-heading;
+        text-transform: uppercase;
+
+        cite {
+            margin-right: $spacing-tiny;
+
+            font-style: normal;
+        }
+
+        img {
+            border-radius: 50%;
+            height: $spacing-huge;
+            margin-right: $spacing-small;
+            width: $spacing-huge;
+        }
+    }
+
+    .comment-meta {
+        display: none;
+    }
+
+    .comment-reply-link {
+        border-radius: $border-radius;
+        display: inline-block;
+        margin-bottom: $spacing-large;
+        padding: $spacing-tiny $spacing-small;
+
+        background: $color-white;
+        border: 1px solid $color-purple;
+        color: $color-purple;
+
+        &:focus {
+            outline: none;
+
+            &:after {
+                content: "";
+                height: calc(100% - #{$spacing-tiny});
+                left: $spacing-tiny/2;
+                position: absolute;
+                top: $spacing-tiny/2.4;
+                width: calc(100% - 0.275rem);
+
+                border: 1px solid $color-purple;
+                border-radius: $spacing-tiny;
+            }
+        }
+
+        &:hover {
+            color: $color-purple;
+        }
+    }
