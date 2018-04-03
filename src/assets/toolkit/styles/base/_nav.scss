@@ -12,7 +12,8 @@ nav {
 .pagination {
     display: block;
 
-    a {
+    a,
+    span {
         display: inline-block;
         padding: $spacing-tiny $spacing-small;
         position: relative;
@@ -41,6 +42,18 @@ nav {
             background-color: $color-white;
             opacity: 0;
             transition: 0.2s opacity ease;
+        }
+    }
+
+    .current {
+        background-color: $color-primary;
+        cursor: initial;
+
+
+        &:hover {
+            &:before {
+                opacity: 0;
+            }
         }
     }
 }
