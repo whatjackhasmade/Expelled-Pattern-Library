@@ -4,15 +4,6 @@
  * -----------------------------------------------------------------------------
  */
 
-/**
- * To allow customisation of items within the grid, we've opted to use
- * flexbox over grid. The grid is an 12 column grid system with the ability
- * to have different items in the grid span a varied amount of columns.
- */
-
-/**
- * 1. Prevents horizontal scrollbar from showing.
- */
 .grid {
 	display: block;
 	margin-left: auto;
@@ -96,10 +87,6 @@
 			}
 		}
 	}
-
-	/**
-            * Shortcut modifiers for the grid.
-            */
 
 	.grid--tight > .grid__row {
 		@supports (display: grid) and (grid-auto-rows: 1px) {
