@@ -7,6 +7,7 @@
 footer {
 	align-items: flex-start;
 	display: flex;
+	flex-direction: column;
 	padding: $spacing-default;
 
 	background-color: $color-primary;
@@ -23,10 +24,19 @@ footer {
 	li ~ li {
 		margin-top: $spacing-tiny;
 	}
+
+	@include bp-min-width($bp-tablet) {
+		flex-direction: row;
+	}
 }
 
 .footer__content {
-	h1, h2, h3, h4, h5, h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		margin: 0;
 
 		color: $color-white;
@@ -46,7 +56,9 @@ footer {
 		}
 	}
 
-	~ .footer__content {
-		margin-left: $spacing-large;
+	@include bp-min-width($bp-tablet) {
+		~ .footer__content {
+			margin-left: $spacing-large;
+		}
 	}
 }
